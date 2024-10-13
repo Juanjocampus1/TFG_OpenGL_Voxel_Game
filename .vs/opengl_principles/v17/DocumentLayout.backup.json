@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\vao.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\vao.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\vao.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\vao.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:shaders\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 219,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "texture.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\texture.cpp",
+              "RelativeDocumentMoniker": "src\\texture.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\texture.cpp",
+              "RelativeToolTip": "src\\texture.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-13T17:52:25.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "vao.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\vao.cpp",
+              "RelativeDocumentMoniker": "src\\vao.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\vao.cpp",
+              "RelativeToolTip": "src\\vao.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-13T18:41:57.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "vao.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\vao.h",
+              "RelativeDocumentMoniker": "src\\vao.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\vao.h",
+              "RelativeToolTip": "src\\vao.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-13T18:40:15.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "shader.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\shader.cpp",
+              "RelativeDocumentMoniker": "src\\shader.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\shader.cpp",
+              "RelativeToolTip": "src\\shader.cpp",
+              "ViewState": "AgIAAEEAAAAAAAAAAADwv1kAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-13T18:25:01.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "texture.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\texture.h",
+              "RelativeDocumentMoniker": "src\\texture.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\texture.h",
+              "RelativeToolTip": "src\\texture.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-13T17:45:58.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "vertex_shader.glsl",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\vertex_shader.glsl",
+              "RelativeDocumentMoniker": "shaders\\vertex_shader.glsl",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\vertex_shader.glsl",
+              "RelativeToolTip": "shaders\\vertex_shader.glsl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-12T11:18:43.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "shader.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\shader.h",
+              "RelativeDocumentMoniker": "src\\shader.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\shader.h",
+              "RelativeToolTip": "src\\shader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-12T11:19:36.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fragment_shader.glsl",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl",
+              "RelativeDocumentMoniker": "shaders\\fragment_shader.glsl",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl",
+              "RelativeToolTip": "shaders\\fragment_shader.glsl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-12T11:19:07.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp",
+              "RelativeDocumentMoniker": "src\\Main.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp*",
+              "RelativeToolTip": "src\\Main.cpp*",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAAwA0BAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-05T16:22:30.383Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
