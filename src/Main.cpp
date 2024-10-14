@@ -20,30 +20,42 @@ const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
 
 GLfloat lightvertices[] = {
-    // Posiciones
-    -0.1f, -0.1f,  0.1f,
-    -0.1f, -0.1f, -0.1f,
-     0.1f, -0.1f, -0.1f,
-     0.1f, -0.1f,  0.1f,
-    -0.1f,  0.1f,  0.1f,
-    -0.1f,  0.1f, -0.1f,
-     0.1f,  0.1f, -0.1f,
-     0.1f,  0.1f,  0.1f
+    // Posiciones (x, y, z)
+    -0.1f, -0.1f,  0.1f,  // Vértice 0 (inferior izquierda frontal)
+    -0.1f, -0.1f, -0.1f,  // Vértice 1 (inferior izquierda trasera)
+     0.1f, -0.1f, -0.1f,  // Vértice 2 (inferior derecha trasera)
+     0.1f, -0.1f,  0.1f,  // Vértice 3 (inferior derecha frontal)
+    -0.1f,  0.1f,  0.1f,  // Vértice 4 (superior izquierda frontal)
+    -0.1f,  0.1f, -0.1f,  // Vértice 5 (superior izquierda trasera)
+     0.1f,  0.1f, -0.1f,  // Vértice 6 (superior derecha trasera)
+     0.1f,  0.1f,  0.1f   // Vértice 7 (superior derecha frontal)
 };
 
+
 GLuint lightIndices[] = {
-    0, 1, 2,
-    0, 2, 3,
-    0, 4, 7,
-    0, 7, 3,
-    3, 7, 6,
-    3, 6, 2,
-    2, 6, 5,
-    2, 5, 1,
-    1, 5, 4,
-    1, 4, 0,
-    4, 5, 6,
-    4, 6, 7
+    // Cara frontal
+    0, 1, 2,  // Primer triángulo
+    0, 2, 3,  // Segundo triángulo
+
+    // Cara lateral izquierda
+    0, 4, 7,  // Primer triángulo
+    0, 7, 3,  // Segundo triángulo
+
+    // Cara lateral derecha
+    3, 7, 6,  // Primer triángulo
+    3, 6, 2,  // Segundo triángulo
+
+    // Cara trasera
+    2, 6, 5,  // Primer triángulo
+    2, 5, 1,  // Segundo triángulo
+
+    // Cara superior
+    1, 5, 4,  // Primer triángulo
+    1, 4, 0,  // Segundo triángulo
+
+    // Cara inferior (ajustada correctamente)
+    6, 7, 4,  // Primer triángulo
+    6, 4, 5   // Segundo triángulo
 };
 
 // Vertices y colores del cubo
@@ -88,13 +100,12 @@ GLfloat vertices[] = {
 
 GLuint indices[] = {
     0, 1, 2, 0, 2, 3,   // Cara trasera
-    4, 5, 6, 4, 6, 7,   // Cara delantera
-    8, 9, 10, 8, 10, 11,   // Cara izquierda
+    4, 7, 6, 4, 6, 5,   // Cara delantera (ajustada)
+    8, 11, 10, 8, 10, 9,   // Cara izquierda (ajustada)
     12, 13, 14, 12, 14, 15,   // Cara derecha
-    16, 17, 18, 16, 18, 19,   // Cara inferior
+    16, 19, 18, 16, 18, 17,   // Cara inferior (ajustada)
     20, 21, 22, 20, 22, 23    // Cara superior
 };
-
 
 // Callback para ajustar el viewport cuando se cambia el tamaño de la ventana
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -204,6 +215,11 @@ int main() {
     cubeTexture.texUnit(shaderProgram, "texture1", 0);
 
     glEnable(GL_DEPTH_TEST);
+
+    glEnable(GL_CULL_FACE);
+	glCullFace(GL_FRONT);
+	glFrontFace(GL_CCW);
+
 
     Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f, 0.0f, 3.0f));
     double deltaTime = 0.0f; // Tiempo entre el frame actual y el anterior
