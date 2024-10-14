@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType) {
+Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType) : ID(0) {
     // Load and create a texture    
     type = texType;
     // Flip the image vertically
@@ -33,7 +33,9 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
     glGenerateMipmap(texType);
 
     glBindTexture(texType, 0);
+    stbi_image_free(bytes); // Liberar la memoria de la imagen
 }
+
 
 void Texture::texUnit(Shader& shader, const char* uniform, GLuint unit) {
     GLuint texUni = glGetUniformLocation(shader.ID, uniform);
