@@ -193,7 +193,7 @@ int main() {
 	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 
     // Configuración de la posición y transformación del cubo de luz
-    glm::vec3 lightPos(1.5f, 0.5f, 0.5f); // Posición del cubo de luz, ajusta según sea necesario
+    glm::vec3 lightPos(1.0f, 1.0f, 1.0f); // Posición del cubo de luz, ajusta según sea necesario
     glm::mat4 lightModel = glm::mat4(1.0f);
     lightModel = glm::translate(lightModel, lightPos);
 
@@ -222,27 +222,40 @@ int main() {
 
 
     Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f, 0.0f, 3.0f));
-    double deltaTime = 0.0f; // Tiempo entre el frame actual y el anterior
-    double lastFrame = 0.0f; // Tiempo del último frame
+   
+    double prevTime = 0.0;
+	double crntTime = 0.0;
+	double timeDiff;
+	unsigned int counter = 0;
+
+	glfwSwapInterval(0);
 
     while (!glfwWindowShouldClose(window)) {
-        std::cout << "Inicio del bucle" << std::endl;
 
         // Calcular el tiempo transcurrido entre frames
-        double currentFrame = glfwGetTime();
-        deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
+        crntTime = glfwGetTime();
+        timeDiff = crntTime - prevTime;
+        counter++;
+
+		if (timeDiff >= 1.0 / 100.0) {
+			string FPS = to_string((1.0 / timeDiff)* counter);
+			string ms = to_string((timeDiff / counter) * 1000);
+			string newTitle = "Voxel_Game_Engine - " + FPS + "FPS / " + ms + "ms";
+			glfwSetWindowTitle(window, newTitle.c_str());
+			prevTime = crntTime;
+			counter = 0;
+            camera.Inputs(window);
+		}
 
         // Procesar entrada
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(window, true);
 
         // Renderizar
-        glClearColor(0.07f, 0.13f, 0.7f, 1.0f);
+        glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Inputs de la cámara
-        camera.Inputs(window);
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
 		//renderizar el cubo
@@ -263,8 +276,6 @@ int main() {
 
         // Poll para procesar eventos
         glfwPollEvents();
-
-        std::cout << "Fin del bucle" << std::endl;
     }
 
     // Deallocate resources
