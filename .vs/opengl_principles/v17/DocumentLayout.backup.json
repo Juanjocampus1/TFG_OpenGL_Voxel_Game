@@ -7,7 +7,16 @@
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG_OpenGL_Voxel_Game-master (2)\\TFG_OpenGL_Voxel_Game-master\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,22 +40,48 @@
               "RelativeDocumentMoniker": "shaders\\fragment_shader.glsl",
               "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl*",
               "RelativeToolTip": "shaders\\fragment_shader.glsl*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-10-15T16:16:36.791Z",
+              "WhenOpened": "2024-10-15T17:52:52.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Main.cpp",
-              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG_OpenGL_Voxel_Game-master (2)\\TFG_OpenGL_Voxel_Game-master\\src\\Main.cpp",
-              "RelativeDocumentMoniker": "..\\TFG_OpenGL_Voxel_Game-master (2)\\TFG_OpenGL_Voxel_Game-master\\src\\Main.cpp",
-              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG_OpenGL_Voxel_Game-master (2)\\TFG_OpenGL_Voxel_Game-master\\src\\Main.cpp*",
-              "RelativeToolTip": "..\\TFG_OpenGL_Voxel_Game-master (2)\\TFG_OpenGL_Voxel_Game-master\\src\\Main.cpp*",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAAKgAAAAVAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp",
+              "RelativeDocumentMoniker": "src\\Main.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp",
+              "RelativeToolTip": "src\\Main.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-15T16:12:16.379Z",
+              "WhenOpened": "2024-10-15T17:37:48.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "chunk.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.h",
+              "RelativeDocumentMoniker": "src\\chunk.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.h",
+              "RelativeToolTip": "src\\chunk.h",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-15T17:37:08.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "chunk.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp",
+              "RelativeDocumentMoniker": "src\\chunk.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp",
+              "RelativeToolTip": "src\\chunk.cpp",
+              "ViewState": "AgIAAIsAAAAAAAAAAADwv6EAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-15T17:36:42.159Z",
               "EditorCaption": ""
             }
           ]

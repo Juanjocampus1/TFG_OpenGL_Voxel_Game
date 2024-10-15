@@ -42,13 +42,13 @@
     <ClCompile Include="glad.c">
       <Filter>Archivos de recursos\vendor</Filter>
     </ClCompile>
-    <ClCompile Include="..\TFG_OpenGL_Voxel_Game-master (2)\TFG_OpenGL_Voxel_Game-master\src\chunk.cpp">
+    <ClCompile Include="src\shader.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\TFG_OpenGL_Voxel_Game-master (2)\TFG_OpenGL_Voxel_Game-master\src\Main.cpp">
+    <ClCompile Include="src\chunk.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="shader.cpp">
+    <ClCompile Include="src\Main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -85,10 +85,10 @@
     <ClInclude Include="src\texture.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\TFG_OpenGL_Voxel_Game-master (2)\TFG_OpenGL_Voxel_Game-master\src\Chunk.h">
+    <ClInclude Include="src\shader.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="shader.h">
+    <ClInclude Include="src\chunk.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -96,7 +96,7 @@
     <Image Include="Texture_atlas.png">
       <Filter>Archivos de recursos\Textures</Filter>
     </Image>
-    <Image Include="Texture_atlas_spec.png">
+    <Image Include="Texture_atlas_specular.png">
       <Filter>Archivos de recursos\Textures</Filter>
     </Image>
   </ItemGroup>

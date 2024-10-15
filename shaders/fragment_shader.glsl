@@ -10,6 +10,7 @@ in vec3 crntPos;
 
 uniform sampler2D texture1;
 uniform sampler2D texture2;
+
 uniform vec4 lightColor;
 uniform vec3 lightPos;
 uniform vec3 camPos;
@@ -28,4 +29,5 @@ void main(){
     float specular = specularLight * specAmount;
 
     FragColor = texture(texture1, TexCoord) * lightColor * (diffuse + ambient ) + texture(texture2, TexCoord).r * specular;
+   
 }
