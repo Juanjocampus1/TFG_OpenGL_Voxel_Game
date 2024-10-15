@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType) : ID(0) {
+Texture::Texture(const char* image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType) : ID(0) {
     // Load and create a texture    
     type = texType;
     // Flip the image vertically
@@ -18,7 +18,8 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
     }
 
     glGenTextures(1, &ID); // Inicializar ID
-    glActiveTexture(slot);
+    glActiveTexture(GL_TEXTURE0 + slot);
+	unit = slot;
     glBindTexture(texType, ID);
 
     // Set texture filtering parameters
@@ -44,6 +45,7 @@ void Texture::texUnit(Shader& shader, const char* uniform, GLuint unit) {
 }
 
 void Texture::Bind() {
+    glActiveTexture(GL_TEXTURE0 + unit);
     glBindTexture(type, ID);
 }
 

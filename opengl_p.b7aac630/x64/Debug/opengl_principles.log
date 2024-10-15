@@ -1,1 +1,7 @@
-﻿  opengl_principles.vcxproj -> E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\x64\Debug\opengl_principles.exe
+﻿  Main.cpp
+chunk.obj : error LNK2019: símbolo externo "public: void __cdecl Shader::setMat4(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,struct glm::tmat4x4<float,0> const &)const " (?setMat4@Shader@@QEBAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBU?$tmat4x4@M$0A@@glm@@@Z) sin resolver al que se hace referencia en la función "public: void __cdecl Chunk::render(class Shader &,class Texture &,class Camera &)" (?render@Chunk@@QEAAXAEAVShader@@AEAVTexture@@AEAVCamera@@@Z)
+chunk.obj : error LNK2019: símbolo externo "public: void __cdecl Shader::use(void)" (?use@Shader@@QEAAXXZ) sin resolver al que se hace referencia en la función "public: void __cdecl Chunk::render(class Shader &,class Texture &,class Camera &)" (?render@Chunk@@QEAAXAEAVShader@@AEAVTexture@@AEAVCamera@@@Z)
+Main.obj : error LNK2001: símbolo externo "public: void __cdecl Shader::use(void)" (?use@Shader@@QEAAXXZ) sin resolver
+texture.obj : error LNK2001: símbolo externo "public: void __cdecl Shader::use(void)" (?use@Shader@@QEAAXXZ) sin resolver
+Main.obj : error LNK2019: símbolo externo "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z) sin resolver al que se hace referencia en la función main
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\x64\Debug\opengl_principles.exe : fatal error LNK1120: 3 externos sin resolver
