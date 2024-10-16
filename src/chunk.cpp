@@ -152,10 +152,17 @@ void Chunk::render(Shader& shader, Texture& texture, Camera& camera) {
             }
         }
     }
-
-
-
-
-
     vao.Unbind();
+}
+
+int Chunk::getWidth() const {
+	return width;
+}
+
+int Chunk::getHeight() const {
+	return height;
+}
+
+int Chunk::getDepth() const {
+	return depth;
 }

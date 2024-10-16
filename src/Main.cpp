@@ -14,6 +14,7 @@
 #include "vao.h"
 #include "vbo.h"
 #include "ebo.h"
+#include "planet.h" // Incluir el encabezado de Planeta
 
 using namespace std;
 
@@ -118,7 +119,7 @@ int main() {
     Texture texture("Texture_atlas.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
     texture.texUnit(shaderProgram, "texture1", 0);
     Texture textureSpec("Texture_atlas_spec.png", GL_TEXTURE_2D, 1, GL_RED, GL_UNSIGNED_BYTE);
-    textureSpec.texUnit(shaderProgram, "texture3", 1);
+    textureSpec.texUnit(shaderProgram, "texture2", 1);
 
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
@@ -127,6 +128,10 @@ int main() {
     glFrontFace(GL_CCW);
 
     Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f, 0.0f, 3.0f));
+
+    // Crear una instancia de Planeta
+    Planeta planeta(5); // Distancia de renderizado de 10 chunks
+    planeta.generateWorld(16, 5, 16); // Generar el mundo con chunks de 16x10x16
 
     double prevTime = 0.0;
     double crntTime = 0.0;
@@ -163,14 +168,8 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
-        // Renderizar el chunk
-        shaderProgram.use();
-        texture.Bind();
-        textureSpec.Bind();
-        glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
-        camera.Matrix(shaderProgram, "camMatrix");
-
-        chunk.render(shaderProgram, texture, camera);
+        // Renderizar el mundo
+        planeta.renderWorld(shaderProgram, texture, camera, camera.Position);
 
         // Renderizar el cubo de luz
         lightShader.use();

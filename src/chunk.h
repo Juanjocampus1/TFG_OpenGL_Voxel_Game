@@ -15,6 +15,9 @@ class Chunk {
 public:
     Chunk(int width, int height, int depth);
     void render(Shader& shader, Texture& texture, Camera& camera);
+	int getWidth() const;
+	int getHeight() const;
+	int getDepth() const;
 
 private:
     int width, height, depth;

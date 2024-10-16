@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\planet.cpp" />
     <ClCompile Include="src\shader.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\chunk.cpp" />
@@ -165,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\lluanllo\Documents\opengl\stb_image.h" />
+    <ClInclude Include="src\planet.h" />
     <ClInclude Include="src\shader.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\chunk.h" />
