@@ -1,10 +1,18 @@
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG_OpenGL_Voxel_Game-master (2)\TFG_OpenGL_Voxel_Game-master\src\chunk.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\chunk.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG_OpenGL_Voxel_Game-master (2)\TFG_OpenGL_Voxel_Game-master\src\Main.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Main.obj
 E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\glad.c;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\glad.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_demo.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_demo.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_draw.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_draw.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_impl_glfw.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_impl_glfw.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_impl_opengl3.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_impl_opengl3.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_tables.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_tables.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_widgets.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_widgets.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\chunk.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\Main.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Main.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\Mesh.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Mesh.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\shader.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\shader.obj
 E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\Camera.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Camera.obj
 E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\ebo.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\ebo.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\shader.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\shader.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\shader.h;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\shader.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\stb.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\stb.obj
 E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\texture.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\texture.obj
 E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\vao.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\vao.obj
 E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\vbo.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\vbo.obj

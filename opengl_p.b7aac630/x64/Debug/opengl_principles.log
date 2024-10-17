@@ -1,4 +1,4 @@
-﻿texture.obj : error LNK2019: símbolo externo stbi_load sin resolver al que se hace referencia en la función "public: __cdecl Texture::Texture(char const *,char const *,unsigned int,unsigned int,unsigned int)" (??0Texture@@QEAA@PEBD0III@Z)
-texture.obj : error LNK2019: símbolo externo stbi_image_free sin resolver al que se hace referencia en la función "public: __cdecl Texture::Texture(char const *,char const *,unsigned int,unsigned int,unsigned int)" (??0Texture@@QEAA@PEBD0III@Z)
-texture.obj : error LNK2019: símbolo externo stbi_set_flip_vertically_on_load sin resolver al que se hace referencia en la función "public: __cdecl Texture::Texture(char const *,char const *,unsigned int,unsigned int,unsigned int)" (??0Texture@@QEAA@PEBD0III@Z)
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\x64\Debug\opengl_principles.exe : fatal error LNK1120: 3 externos sin resolver
+﻿  chunk.cpp
+  Main.cpp
+  Generando código...
+  opengl_principles.vcxproj -> E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\x64\Debug\opengl_principles.exe

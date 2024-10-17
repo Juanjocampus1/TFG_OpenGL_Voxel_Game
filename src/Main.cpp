@@ -1,4 +1,8 @@
-#include "Mesh.h"
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
+#include "Header_files/Mesh.h"
 
 using namespace std;
 
@@ -111,11 +115,10 @@ int main() {
         return -1;
     }
 
-    
-
     // Ajuste del tamaño del viewport
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+	glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 
 	Texture textures[]
 	{
@@ -165,8 +168,16 @@ int main() {
     double crntTime = 0.0;
     double timeDiff;
     unsigned int counter = 0;
-    glfwSwapInterval(0);
+    glfwSwapInterval(0); 
 
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	ImGui::StyleColorsDark();
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init("#version 330"); 
+
+    // Bucle de renderizado
     // Bucle de renderizado
     while (!glfwWindowShouldClose(window)) {
         // Calcular el tiempo transcurrido
@@ -181,12 +192,19 @@ int main() {
             glfwSetWindowTitle(window, newTitle.c_str());
             prevTime = crntTime;
             counter = 0;
-            camera.Inputs(window);
+            if (!io.WantCaptureMouse) {
+                camera.Inputs(window);
+            }
         }
 
         // Procesar entrada
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(window, true);
+
+        // Iniciar un nuevo frame de ImGui
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
 
         // Renderizar
         glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -195,14 +213,28 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
-		// draw the meshes
-		Cube.Draw(shaderProgram, camera);
-		light.Draw(lightShader, camera);
+        // Renderizar los objetos 3D
+        Cube.Draw(shaderProgram, camera);
+        light.Draw(lightShader, camera);
+
+        // Crear la interfaz de usuario de ImGui
+        ImGui::Begin("Test");
+        ImGui::Text("hola");
+        ImGui::End();
+
+        // Renderizar la interfaz de usuario de ImGui
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         // Intercambiar buffers y procesar eventos
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+
+
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
 
 	// Eliminar recursos
 	shaderProgram.Delete();

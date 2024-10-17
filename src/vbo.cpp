@@ -1,4 +1,4 @@
-#include "vbo.h"
+#include "Header_files/vbo.h"
 
 VBO::VBO(std::vector<Vertex>& vertices) {
     glGenBuffers(1, &ID);
