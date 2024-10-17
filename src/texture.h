@@ -1,22 +1,26 @@
-#ifndef TEXTURE_H
-#define TEXTURE_H
+#ifndef TEXTURE_CLASS_H
+#define TEXTURE_CLASS_H
 
-#include <glad/glad.h>
-#include <stb/stb_image.h>
-#include "shader.h"
+#include<glad/glad.h>
+#include<stb/stb_image.h>
+#include"shader.h"
 
-class Texture {
-    public:
-        GLuint ID; // Declaración de ID
-        GLenum type;
-        GLuint unit;
-        
-        Texture(const char* image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType);
+class Texture
+{
+public:
+	GLuint ID;
+	const char* type;
+	GLuint unit;
 
-        void texUnit(Shader& shader, const char* uniform, GLuint unit);
-        void Bind();
-        void Unbind();
-        void Delete();
+	Texture(const char* image, const char* texType, GLuint slot, GLenum format, GLenum pixelType);
+
+	// Assigns a texture unit to a texture
+	void texUnit(Shader& shader, const char* uniform, GLuint unit);
+	// Binds a texture
+	void Bind();
+	// Unbinds a texture
+	void Unbind();
+	// Deletes a texture
+	void Delete();
 };
-
 #endif

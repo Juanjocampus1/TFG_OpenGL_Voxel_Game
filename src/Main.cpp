@@ -1,45 +1,83 @@
-#include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#define STB_IMAGE_IMPLEMENTATION
-#include <stb/stb_image.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-
-#include "texture.h"
-#include "shader.h"
-#include "camera.h"
-#include "chunk.h"
-#include "vao.h"
-#include "vbo.h"
-#include "ebo.h"
-#include "planet.h" // Incluir el encabezado de Planeta
+#include "Mesh.h"
 
 using namespace std;
 
 const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
 
-GLfloat lightvertices[] = {
+Vertex vertices[] = {
+    // posiciones                            // colores              // coordenadas de textura (U, V)             //normals
+    // Cara trasera
+    {glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f), glm::vec3(0.0f, 0.0f, -1.0f)},
+    {glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f), glm::vec3(0.0f, 0.0f, -1.0f)},
+    {glm::vec3(0.5f, 0.5f, -0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f), glm::vec3(0.0f, 0.0f, -1.0f)},
+    {glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f), glm::vec3(0.0f, 0.0f, -1.0f)},
+
+    // Cara delantera
+    {glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec3(1.0f, 0.0f, 1.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f), glm::vec3(0.0f, 0.0f, 1.0f)},
+    {glm::vec3(0.5f, -0.5f, 0.5f), glm::vec3(0.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f), glm::vec3(0.0f, 0.0f, 1.0f)},
+    {glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(1.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f), glm::vec3(0.0f, 0.0f, 1.0f)},
+    {glm::vec3(-0.5f, 0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f), glm::vec3(0.0f, 0.0f, 1.0f)},
+
+    // Cara izquierda
+    {glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f), glm::vec3(-1.0f, 0.0f, 0.0f)},
+    {glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec3(1.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f), glm::vec3(-1.0f, 0.0f, 0.0f)},
+    {glm::vec3(-0.5f, 0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f), glm::vec3(-1.0f, 0.0f, 0.0f)},
+    {glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f), glm::vec3(-1.0f, 0.0f, 0.0f)},
+
+    // Cara derecha
+    {glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f), glm::vec3(1.0f, 0.0f, 0.0f)},
+    {glm::vec3(0.5f, -0.5f, 0.5f), glm::vec3(0.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f), glm::vec3(1.0f, 0.0f, 0.0f)},
+    {glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(1.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f), glm::vec3(1.0f, 0.0f, 0.0f)},
+    {glm::vec3(0.5f, 0.5f, -0.5f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f), glm::vec3(1.0f, 0.0f, 0.0f)},
+
+	// Cara inferior
+	{glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(0.0f / 32.0f, 1.0f - 32.0f / 32.0f), glm::vec3(0.0f, -1.0f, 0.0f)},
+	{glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 32.0f / 32.0f), glm::vec3(0.0f, -1.0f, 0.0f)},
+	{glm::vec3(0.5f, -0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(16.0f / 32.0f, 1.0f - 32.0f / 32.0f), glm::vec3(0.0f, -1.0f, 0.0f)},
+	{glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(0.0f / 32.0f, 1.0f - 32.0f / 32.0f), glm::vec3(0.0f, -1.0f, 0.0f)},
+
+	// Cara superior
+	{glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 0.0f / 32.0f), glm::vec3(0.0f, 1.0f, 0.0f)},
+	{glm::vec3(0.5f, 0.5f, -0.5f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(32.0f / 32.0f, 1.0f - 0.0f / 32.0f), glm::vec3(0.0f, 1.0f, 0.0f)},
+	{glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 1.0f - 16.0f / 32.0f), glm::vec3(0.0f, 1.0f, 0.0f)},
+	{glm::vec3(-0.5f, 0.5f, 0.5f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 16.0f / 32.0f), glm::vec3(0.0f, 1.0f, 0.0f)}
+};
+
+GLuint indices[] = {
+    0, 1, 2, 0, 2, 3,   // Cara trasera
+    4, 7, 6, 4, 6, 5,   // Cara delantera (ajustada)
+    8, 11, 10, 8, 10, 9,   // Cara izquierda (ajustada)
+    12, 13, 14, 12, 14, 15,   // Cara derecha
+    16, 19, 18, 16, 18, 17,   // Cara inferior (ajustada)
+    20, 21, 22, 20, 22, 23    // Cara superior
+};
+
+Vertex lightVertices[] = {
     // Posiciones (x, y, z)
-    -0.1f, -0.1f,  0.1f,  // Vértice 0 (inferior izquierda frontal)
-    -0.1f, -0.1f, -0.1f,  // Vértice 1 (inferior izquierda trasera)
-     0.1f, -0.1f, -0.1f,  // Vértice 2 (inferior derecha trasera)
-     0.1f, -0.1f,  0.1f,  // Vértice 3 (inferior derecha frontal)
-    -0.1f,  0.1f,  0.1f,  // Vértice 4 (superior izquierda frontal)
-    -0.1f,  0.1f, -0.1f,  // Vértice 5 (superior izquierda trasera)
-     0.1f,  0.1f, -0.1f,  // Vértice 6 (superior derecha trasera)
-     0.1f,  0.1f,  0.1f   // Vértice 7 (superior derecha frontal)
+    Vertex{glm::vec3(-0.1f, -0.1f,  0.1f)},
+    Vertex{glm::vec3(-0.1f, -0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f, -0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f, -0.1f,  0.1f)},
+    Vertex{glm::vec3(-0.1f,  0.1f,  0.1f)},
+    Vertex{glm::vec3(-0.1f,  0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f,  0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f,  0.1f,  0.1f)} 
 };
 
 GLuint lightIndices[] = {
-    0, 1, 2, 0, 2, 3,   // Cara inferior
-    4, 5, 6, 4, 6, 7,   // Cara superior
-    0, 4, 5, 0, 5, 1,   // Cara izquierda
-    2, 3, 7, 2, 7, 6,   // Cara derecha
-    1, 5, 6, 1, 6, 2,   // Cara trasera
-    0, 3, 7, 0, 7, 4    // Cara delantera
+    0, 1, 2,
+    0, 2, 3,
+    0, 4, 7,
+    0, 7, 3,
+    3, 7, 6,
+    3, 6, 2,
+    2, 6, 5,
+    2, 5, 1,
+    1, 5, 4,
+    1, 4, 0,
+    4, 5, 6,
+    4, 6, 7
 };
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -73,54 +111,48 @@ int main() {
         return -1;
     }
 
+    
+
     // Ajuste del tamaño del viewport
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // Cargar y compilar shaders
+
+	Texture textures[]
+	{
+		Texture("Texture_atlas.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE),
+		Texture("Texture_atlas_specular.png", "specular", 1, GL_RED, GL_UNSIGNED_BYTE)
+	};
+
+    // draw a cube
     Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
+	vector <Vertex> verts(vertices, vertices + sizeof(vertices) / sizeof(Vertex));
+	vector <GLuint> ind(indices, indices + sizeof(indices) / sizeof(GLuint));
+	vector <Texture> tex(textures, textures + sizeof(textures) / sizeof(Texture));
+	Mesh Cube(verts, ind, tex);
+
+	//draw a light cube
     Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
-
-    // Crear el chunk y sus buffers
-    Chunk chunk(16, 10, 16);
-
-    VAO lightVAO;
-    lightVAO.Bind();
-
-    VBO lightVBO(lightvertices, sizeof(lightvertices));
-    EBO lightEBO(lightIndices, sizeof(lightIndices));
-
-    // Atributo de posición
-    lightVAO.LinkVBO(lightVBO, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
-
-    // Desvincular VAO, VBO y EBO
-    lightVAO.Unbind();
-    lightVBO.Unbind();
-    lightEBO.Unbind();
+	vector <Vertex> lightVerts(lightVertices, lightVertices + sizeof(lightVertices) / sizeof(Vertex));
+	vector <GLuint> lightInd(lightIndices, lightIndices + sizeof(lightIndices) / sizeof(GLuint));
+	Mesh light(lightVerts, lightInd, tex);
 
     glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-
-    // Configuración de la posición y transformación del cubo de luz
-    glm::vec3 lightPos(-2.0f, 15.0f, -2.0f); // Posición del cubo de luz, ajusta según sea necesario
+    glm::vec3 lightPos = glm::vec3(1.0f, 1.0f, 1.0f);
     glm::mat4 lightModel = glm::mat4(1.0f);
     lightModel = glm::translate(lightModel, lightPos);
 
-    glm::mat4 chunkModel = glm::mat4(1.0f);
-    chunkModel = glm::translate(chunkModel, glm::vec3(0.0f, 0.0f, 0.0f)); // Ajusta la posición según sea necesario
+    glm::vec3 objectPos = glm::vec3(0.0f, 0.0f, 0.0f);
+    glm::mat4 objectModel = glm::mat4(1.0f);
+    objectModel = glm::translate(objectModel, objectPos);
 
     lightShader.use();
     glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
     glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
     shaderProgram.use();
-    glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(chunkModel));
+    glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
     glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
     glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
-
-    // Cargar texturas
-    Texture texture("Texture_atlas.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
-    texture.texUnit(shaderProgram, "texture1", 0);
-    Texture textureSpec("Texture_atlas_spec.png", GL_TEXTURE_2D, 1, GL_RED, GL_UNSIGNED_BYTE);
-    textureSpec.texUnit(shaderProgram, "texture2", 1);
-
+    
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -129,15 +161,10 @@ int main() {
 
     Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f, 0.0f, 3.0f));
 
-    // Crear una instancia de Planeta
-    Planeta planeta(5); // Distancia de renderizado de 10 chunks
-    planeta.generateWorld(16, 5, 16); // Generar el mundo con chunks de 16x10x16
-
     double prevTime = 0.0;
     double crntTime = 0.0;
     double timeDiff;
     unsigned int counter = 0;
-
     glfwSwapInterval(0);
 
     // Bucle de renderizado
@@ -168,25 +195,18 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
-        // Renderizar el mundo
-        planeta.renderWorld(shaderProgram, texture, camera, camera.Position);
-
-        // Renderizar el cubo de luz
-        lightShader.use();
-        camera.Matrix(lightShader, "camMatrix");
-        lightVAO.Bind();
-        glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
+		// draw the meshes
+		Cube.Draw(shaderProgram, camera);
+		light.Draw(lightShader, camera);
 
         // Intercambiar buffers y procesar eventos
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
-    // Liberar recursos
-    lightVAO.Delete();
-    lightVBO.Delete();
-    lightEBO.Delete();
-    texture.Delete();
+	// Eliminar recursos
+	shaderProgram.Delete();
+	lightShader.Delete();
 
     glfwDestroyWindow(window);
     glfwTerminate();
