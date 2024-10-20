@@ -159,6 +159,7 @@
     <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="imgui\imgui_tables.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\block.cpp" />
     <ClCompile Include="src\chunk.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
@@ -187,6 +188,8 @@
     <ClInclude Include="imgui\imstb_rectpack.h" />
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="src\Header_files\Block.h" />
+    <ClInclude Include="src\Header_files\Blocks.h" />
     <ClInclude Include="src\Header_files\chunk.h" />
     <ClInclude Include="src\Header_files\Mesh.h" />
     <ClInclude Include="src\Header_files\shader.h" />

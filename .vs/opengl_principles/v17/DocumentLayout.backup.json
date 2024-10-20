@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,8 +15,28 @@
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +46,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 219,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "chunk.h",
-              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\chunk.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\chunk.h",
-              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\chunk.h*",
-              "RelativeToolTip": "src\\Header_files\\chunk.h*",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvykAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T21:09:30.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp",
-              "RelativeDocumentMoniker": "src\\Main.cpp",
-              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp",
-              "RelativeToolTip": "src\\Main.cpp",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAAAN0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T17:36:45.043Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Mesh.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Mesh.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Mesh.h",
+              "RelativeToolTip": "src\\Header_files\\Mesh.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-19T19:02:52.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mesh.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Mesh.cpp",
+              "RelativeDocumentMoniker": "src\\Mesh.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Mesh.cpp",
+              "RelativeToolTip": "src\\Mesh.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T20:02:39.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "chunk.cpp",
               "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp",
               "RelativeDocumentMoniker": "src\\chunk.cpp",
-              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp*",
-              "RelativeToolTip": "src\\chunk.cpp*",
-              "ViewState": "AgIAAIcAAAAAAAAAAADwv5QAAABOAAAAAAAAAA==",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\chunk.cpp",
+              "RelativeToolTip": "src\\chunk.cpp",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAjwKEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T17:35:51.007Z",
+              "WhenOpened": "2024-10-18T17:07:39.238Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "chunk.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\chunk.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\chunk.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\chunk.h",
+              "RelativeToolTip": "src\\Header_files\\chunk.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBsAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T17:07:35.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Blocks.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Blocks.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Blocks.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Blocks.h",
+              "RelativeToolTip": "src\\Header_files\\Blocks.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T17:09:24.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Block.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Block.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Block.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Header_files\\Block.h",
+              "RelativeToolTip": "src\\Header_files\\Block.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T17:09:23.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "block.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\block.cpp",
+              "RelativeDocumentMoniker": "src\\block.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\block.cpp",
+              "RelativeToolTip": "src\\block.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T17:09:16.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp",
+              "RelativeDocumentMoniker": "src\\Main.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\src\\Main.cpp*",
+              "RelativeToolTip": "src\\Main.cpp*",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAAOMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-17T17:36:45.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fragment_shader.glsl",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl",
+              "RelativeDocumentMoniker": "shaders\\fragment_shader.glsl",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\opengl_principles\\shaders\\fragment_shader.glsl",
+              "RelativeToolTip": "shaders\\fragment_shader.glsl",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-10-18T16:19:02.82Z"
             }
           ]
         }

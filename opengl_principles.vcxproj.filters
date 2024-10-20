@@ -81,6 +81,9 @@
     <ClCompile Include="imgui\imgui_widgets.cpp">
       <Filter>Archivos de origen\imgui</Filter>
     </ClCompile>
+    <ClCompile Include="src\block.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\fragment_shader.glsl">
@@ -149,6 +152,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imgui_impl_opengl3_loader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Header_files\Block.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Header_files\Blocks.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

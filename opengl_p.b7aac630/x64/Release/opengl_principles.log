@@ -1,74 +1,8 @@
 ﻿  chunk.cpp
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(113,63): warning C4267: 'argumento': conversión de 'size_t' a '_Ty'; posible pérdida de datos
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(113,63): warning C4267:         with
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(113,63): warning C4267:         [
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(113,63): warning C4267:             _Ty=GLuint
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(113,63): warning C4267:         ]
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5): error C2440: 'static_cast': no se puede realizar la conversión de 'A' a 'float'
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5): error C2440:         with
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5): error C2440:         [
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5): error C2440:             A=Vertex
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5): error C2440:         ]
-  (compilando archivo de origen "src/chunk.cpp")
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5):
-      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(77,5):
-      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
-          E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(108,70):
-          Vea la referencia a la creación de una instancia de la función plantilla "glm::tvec3<float,glm::packed_highp>::tvec3<Vertex,Vertex,Vertex>(A,B,C)" que se está compilando
-          with
-          [
-              A=Vertex,
-              B=Vertex,
-              C=Vertex
-          ]
-              E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(108,49):
-              vea la primera referencia a “glm::tvec3<float,glm::packed_highp>::tvec3” en “Chunk::setupMesh”
-  
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(78,5): error C2440: 'static_cast': no se puede realizar la conversión de 'B' a 'float'
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(78,5): error C2440:         with
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(78,5): error C2440:         [
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(78,5): error C2440:             B=Vertex
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(78,5): error C2440:         ]
-  (compilando archivo de origen "src/chunk.cpp")
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(78,5):
-      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
-  
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(79,5): error C2440: 'static_cast': no se puede realizar la conversión de 'C' a 'float'
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(79,5): error C2440:         with
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(79,5): error C2440:         [
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(79,5): error C2440:             C=Vertex
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(79,5): error C2440:         ]
-  (compilando archivo de origen "src/chunk.cpp")
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec3.inl(79,5):
-      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
-  
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7): error C2440: 'static_cast': no se puede realizar la conversión de 'A' a 'float'
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7): error C2440:         with
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7): error C2440:         [
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7): error C2440:             A=Vertex
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7): error C2440:         ]
-  (compilando archivo de origen "src/chunk.cpp")
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7):
-      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(64,7):
-      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
-          E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(110,61):
-          Vea la referencia a la creación de una instancia de la función plantilla "glm::tvec2<float,glm::packed_highp>::tvec2<Vertex,Vertex>(A,B)" que se está compilando
-          with
-          [
-              A=Vertex,
-              B=Vertex
-          ]
-              E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp(110,50):
-              vea la primera referencia a “glm::tvec2<float,glm::packed_highp>::tvec2” en “Chunk::setupMesh”
-  
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(65,7): error C2440: 'static_cast': no se puede realizar la conversión de 'B' a 'float'
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(65,7): error C2440:         with
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(65,7): error C2440:         [
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(65,7): error C2440:             B=Vertex
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(65,7): error C2440:         ]
-  (compilando archivo de origen "src/chunk.cpp")
-      E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include\glm\detail\type_vec2.inl(65,7):
-      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
-  
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  Generando código
+  32 of 2416 functions ( 1.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    39 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  opengl_principles.vcxproj -> E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\x64\Release\opengl_principles.exe
