@@ -1,19 +1,19 @@
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\glad.c;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\glad.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_demo.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_demo.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_draw.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_draw.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_impl_glfw.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_impl_glfw.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_impl_opengl3.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_impl_opengl3.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_tables.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_tables.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\imgui\imgui_widgets.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\imgui_widgets.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\block.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\block.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\chunk.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\chunk.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\Main.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Main.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\Mesh.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Mesh.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\shader.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\shader.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\Camera.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\Camera.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\ebo.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\ebo.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\stb.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\stb.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\texture.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\texture.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\vao.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\vao.obj
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\src\vbo.cpp;E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\opengl_p.b7aac630\x64\Debug\vbo.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\glad.c;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\glad.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui_demo.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui_demo.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui_draw.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui_draw.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui_impl_glfw.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui_impl_glfw.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui_impl_opengl3.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui_impl_opengl3.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui_tables.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui_tables.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\imgui\imgui_widgets.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\imgui_widgets.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\block.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\block.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\chunk.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\chunk.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\Main.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\Main.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\Mesh.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\Mesh.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\shader.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\shader.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\Camera.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\Camera.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\ebo.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\ebo.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\stb.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\stb.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\texture.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\texture.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\vao.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\vao.obj
+C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\vbo.cpp;C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\opengl_p.b7aac630\x64\Debug\vbo.obj

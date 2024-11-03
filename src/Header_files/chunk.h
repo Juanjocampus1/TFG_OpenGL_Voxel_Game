@@ -2,33 +2,37 @@
 
 #include <vector>
 #include <glm/glm.hpp>
-#include "Mesh.h"
-#include "Shader.h"
+#include <glad/glad.h>
 #include "Camera.h"
+#include "Shader.h"
+
+struct ChunkVertex {
+
+    glm::vec3 position;
+    glm::vec3 color;
+    glm::vec3 normal;
+    glm::vec2 texCoords;
+
+    ChunkVertex(glm::vec3 pos, glm::vec3 col, glm::vec3 norm, glm::vec2 tex)
+        : position(pos), color(col), normal(norm), texCoords(tex) {}
+};
 
 class Chunk {
-public:
-    //Chunk(int width, int height, int depth);
-    Chunk(int width, int height, int depth, std::vector<Vertex>& vertices, std::vector<GLuint>& indices, std::vector<Texture>& textures);
+    public:
+        Chunk(unsigned int chunkSize, glm::vec3 chunkPos);
+		~Chunk();
 
-    // Función para renderizar el chunk usando el shader y la cámara
-    void render(Shader& shader, Camera& camera);
+		void GenerateChunk();
+        void Render(Shader& shader);
+        int GetCubeCount() const;
+        static int GetChunkCount();
 
-private:
-    int width, height, depth;
-
-    // Datos del chunk: define qué partes del chunk tienen un cubo
-    std::vector<std::vector<std::vector<bool>>> chunkData;
-
-    // Malla para almacenar los vértices e índices
-    Mesh mesh;
-
-    // Funciones privadas
-    void generateChunk();  // Genera la estructura del chunk
-    void setupMesh();// Configura la malla generando vértices e índices
-    bool isFaceVisible(int x, int y, int z, int face);
-    bool isCubeAt(int x, int y, int z);
-
-    // Añade un cubo en las posiciones dadas (x, y, z)
-    void addCube(std::vector<Vertex>& vertices, std::vector<GLuint>& indices, int x, int y, int z);
+    private:
+        unsigned int chunkSize;
+        unsigned int numTriangles;
+        std::vector<ChunkVertex> vertices;
+        std::vector<unsigned int> indices;
+        unsigned int vao, vbo, ebo;
+        glm::vec3 chunkPos;
+        static int chunkCount;
 };

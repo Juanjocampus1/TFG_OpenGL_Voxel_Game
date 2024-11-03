@@ -10,89 +10,7 @@ using namespace std;
 const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
 
-// Variables para la luz
-glm::vec3 lightColor(1.0f, 1.0f, 1.0f);
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
-float lightIntensity = 1.0f;
-
-// Variable para escalar el cubo
-float cubeScale = 1.0f;
-
-Vertex vertices[] = {
-    // posiciones                            // colores              // coordenadas de textura (U, V)             //normals
-    // Cara trasera
-    {glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(0.5f, 0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)},
-    {glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(1.0f, 1.0f, 0.0f),  glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)},
-
-    // Cara delantera
-    {glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(1.0f, 0.0f, 1.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(0.5f, -0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)},
-    {glm::vec3(-0.5f, 0.5f, 0.5f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)},
-
-    // Cara izquierda
-    {glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(-0.5f, 0.5f, 0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)},
-    {glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)},
-
-    // Cara derecha
-    {glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(0.5f, -0.5f, 0.5f),glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)},
-    {glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)},
-    {glm::vec3(0.5f, 0.5f, -0.5f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)},
-
-    // Cara inferior
-    {glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(0.0f / 32.0f, 1.0f - 32.0f / 32.0f)},
-    {glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 32.0f / 32.0f)},
-    {glm::vec3(0.5f, -0.5f, 0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(16.0f / 32.0f, 1.0f - 32.0f / 32.0f)},
-    {glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(0.0f / 32.0f, 1.0f - 32.0f / 32.0f)},
-
-    // Cara superior
-    {glm::vec3(-0.5f, 0.5f, -0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 0.0f / 32.0f)},
-    {glm::vec3(0.5f, 0.5f, -0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(32.0f / 32.0f, 1.0f - 0.0f / 32.0f)},
-    {glm::vec3(0.5f, 0.5f, 0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 1.0f - 16.0f / 32.0f)},
-    {glm::vec3(-0.5f, 0.5f, 0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 16.0f / 32.0f)}
-};
-
-GLuint indices[] = {
-    0, 1, 2, 0, 2, 3,   // Cara trasera
-    4, 7, 6, 4, 6, 5,   // Cara delantera (ajustada)
-    8, 11, 10, 8, 10, 9,   // Cara izquierda (ajustada)
-    12, 13, 14, 12, 14, 15,   // Cara derecha
-    16, 19, 18, 16, 18, 17,   // Cara inferior (ajustada)
-    20, 21, 22, 20, 22, 23    // Cara superior
-};
-
-Vertex lightVertices[] = {
-    // Posiciones (x, y, z)
-    Vertex{glm::vec3(-0.1f, -0.1f,  0.1f)},
-    Vertex{glm::vec3(-0.1f, -0.1f, -0.1f)},
-    Vertex{glm::vec3(0.1f, -0.1f, -0.1f)},
-    Vertex{glm::vec3(0.1f, -0.1f,  0.1f)},
-    Vertex{glm::vec3(-0.1f,  0.1f,  0.1f)},
-    Vertex{glm::vec3(-0.1f,  0.1f, -0.1f)},
-    Vertex{glm::vec3(0.1f,  0.1f, -0.1f)},
-    Vertex{glm::vec3(0.1f,  0.1f,  0.1f)}
-};
-
-GLuint lightIndices[] = {
-    0, 1, 2,
-    0, 2, 3,
-    0, 4, 7,
-    0, 7, 3,
-    3, 7, 6,
-    3, 6, 2,
-    2, 6, 5,
-    2, 5, 1,
-    1, 5, 4,
-    1, 4, 0,
-    4, 5, 6,
-    4, 6, 7
-};
-
+// Función de callback para ajustar el tamaño del viewport
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
 }
@@ -127,43 +45,21 @@ int main() {
     // Ajuste del tamaño del viewport
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    Texture textures[]
-    {
+    Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
+    Texture textures[] = {
         Texture("Texture_atlas.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE),
         Texture("Texture_atlas_specular.png", "specular", 1, GL_RED, GL_UNSIGNED_BYTE)
     };
 
-    // draw a cube
-    Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
-    std::vector <Vertex> verts(vertices, vertices + sizeof(vertices) / sizeof(Vertex));
-    std::vector <GLuint> ind(indices, indices + sizeof(indices) / sizeof(GLuint));
-    std::vector <Texture> tex(textures, textures + sizeof(textures) / sizeof(Texture));
-    Mesh Cube(verts, ind, tex);
-    Chunk chunk(16, 1, 16, verts, ind, tex);
-
-    //draw a light cube
-    Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
-    std::vector <Vertex> lightVerts(lightVertices, lightVertices + sizeof(lightVertices) / sizeof(Vertex));
-    std::vector <GLuint> lightInd(lightIndices, lightIndices + sizeof(lightIndices) / sizeof(GLuint));
-    Mesh light(lightVerts, lightInd, tex);
-
-    glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-    glm::vec3 lightPos = glm::vec3(0.0f, 2.0f, 0.0f);
-    //glm::vec3 lightPos = glm::vec3(1.0f, 1.0f, 1.0f);
-    glm::mat4 lightModel = glm::mat4(1.0f);
-    lightModel = glm::translate(lightModel, lightPos);
+    Chunk chunk(16, glm::vec3(0.0f, 0.0f, 0.0f));
 
     glm::vec3 objectPos = glm::vec3(0.0f, 0.0f, 0.0f);
     glm::mat4 objectModel = glm::mat4(1.0f);
     objectModel = glm::translate(objectModel, objectPos);
 
-    lightShader.use();
-    glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
-    glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
     shaderProgram.use();
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
-    glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
-    glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+
 
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
@@ -225,15 +121,14 @@ int main() {
 
         // draw the meshes
         //Cube.Draw(shaderProgram, camera);
-        light.Draw(lightShader, camera);
-        chunk.render(shaderProgram, camera);
+
+        chunk.Render(shaderProgram);
 
         ImGui::Begin("Light Settings");
         ImGui::Text("Test");
         ImGui::Text("Camera Position: (%f, %f, %f)", camera.Position.x, camera.Position.y, camera.Position.z);
-        ImGui::Text("Light Position: (%f, %f, %f)", lightPos.x, lightPos.y, lightPos.z);
-        ImGui::Text("Light Intensity: %f", lightIntensity);
-        ImGui::Text("Cube Scale: %f", cubeScale);
+        ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
+        ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
         ImGui::End();
 
         // Rendering
@@ -250,7 +145,6 @@ int main() {
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
     shaderProgram.Delete();
-    lightShader.Delete();
 
     glfwDestroyWindow(window);
     glfwTerminate();
