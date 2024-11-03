@@ -4,11 +4,15 @@
 
 #include "Header_files/Mesh.h"
 #include "Header_files/Chunk.h"
+#include "Light.cpp"
 
 using namespace std;
 
 const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
+
+int chunkSize = 16;
+int prevChunkSize = chunkSize;
 
 // Función de callback para ajustar el tamaño del viewport
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -45,13 +49,14 @@ int main() {
     // Ajuste del tamaño del viewport
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
-    Texture textures[] = {
+    std::vector<Texture> textures = {
         Texture("Texture_atlas.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE),
         Texture("Texture_atlas_specular.png", "specular", 1, GL_RED, GL_UNSIGNED_BYTE)
     };
 
-    Chunk chunk(16, glm::vec3(0.0f, 0.0f, 0.0f));
+    Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
+	Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
+	Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
 
     glm::vec3 objectPos = glm::vec3(0.0f, 0.0f, 0.0f);
     glm::mat4 objectModel = glm::mat4(1.0f);
@@ -59,7 +64,6 @@ int main() {
 
     shaderProgram.use();
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
-
 
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
@@ -119,16 +123,20 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
-        // draw the meshes
-        //Cube.Draw(shaderProgram, camera);
+        if (chunkSize != prevChunkSize) {
+            cout << "Cambiando el tamaño del chunk a: " << chunkSize << endl;
+            chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
+            prevChunkSize = chunkSize;
+        }
 
-        chunk.Render(shaderProgram);
+        chunk.Render(shaderProgram, camera);
 
         ImGui::Begin("Light Settings");
         ImGui::Text("Test");
         ImGui::Text("Camera Position: (%f, %f, %f)", camera.Position.x, camera.Position.y, camera.Position.z);
         ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
         ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
+        ImGui::SliderInt("Chunk Size", &chunkSize, 1, 64);
         ImGui::End();
 
         // Rendering
@@ -145,6 +153,8 @@ int main() {
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
     shaderProgram.Delete();
+	lightShader.Delete();
+	chunk.~Chunk();
 
     glfwDestroyWindow(window);
     glfwTerminate();

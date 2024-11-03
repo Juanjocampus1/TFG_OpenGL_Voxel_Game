@@ -5,6 +5,7 @@
 #include <glad/glad.h>
 #include "Camera.h"
 #include "Shader.h"
+#include "texture.h"
 
 struct ChunkVertex {
 
@@ -19,11 +20,11 @@ struct ChunkVertex {
 
 class Chunk {
     public:
-        Chunk(unsigned int chunkSize, glm::vec3 chunkPos);
+        Chunk(unsigned int chunkSize, glm::vec3 chunkPos, std::vector<Texture>& textures);
 		~Chunk();
 
 		void GenerateChunk();
-        void Render(Shader& shader);
+        void Render(Shader& shader, Camera& camera);
         int GetCubeCount() const;
         static int GetChunkCount();
 
@@ -32,6 +33,7 @@ class Chunk {
         unsigned int numTriangles;
         std::vector<ChunkVertex> vertices;
         std::vector<unsigned int> indices;
+        std::vector<Texture> textures;
         unsigned int vao, vbo, ebo;
         glm::vec3 chunkPos;
         static int chunkCount;

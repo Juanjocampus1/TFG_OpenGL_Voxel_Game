@@ -1,9 +1,13 @@
 #include "Header_files/chunk.h"
+#include "Header_files/vao.h"
+#include "Header_files/vbo.h"
+#include "Header_files/ebo.h"
+#include "Header_files/Camera.h"
 
 int Chunk::chunkCount = 0;
 
-Chunk::Chunk(unsigned int chunkSize, glm::vec3 chunkPos)
-	: chunkSize(chunkSize), numTriangles(0) {
+Chunk::Chunk(unsigned int chunkSize, glm::vec3 chunkPos, std::vector<Texture>& textures)
+	: chunkSize(chunkSize), numTriangles(0), textures(textures) {
 	chunkCount++;
 	GenerateChunk();
 }
@@ -125,20 +129,43 @@ void Chunk::GenerateChunk() {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
 
-	glVertexAttribPointer(0, 3, GL_BYTE, GL_FALSE, sizeof(ChunkVertex), (void*)0);
+	// Atributos de vértices
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(ChunkVertex), (void*)0);
 	glEnableVertexAttribArray(0);
-
-	glVertexAttribPointer(1, 2, GL_BYTE, GL_FALSE, sizeof(ChunkVertex), (void*)(3 * sizeof(char)));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(ChunkVertex), (void*)offsetof(ChunkVertex, color));
 	glEnableVertexAttribArray(1);
+	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(ChunkVertex), (void*)offsetof(ChunkVertex, normal));
+	glEnableVertexAttribArray(2);
+	glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, sizeof(ChunkVertex), (void*)offsetof(ChunkVertex, texCoords));
+	glEnableVertexAttribArray(3);
 
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 }
 
-void Chunk::Render(Shader& shader) {
+void Chunk::Render(Shader& shader, Camera& camera) {
 	shader.use();
 	glBindVertexArray(vao);
-	glDrawElements(GL_TRIANGLES, numTriangles * 3, GL_UNSIGNED_INT, 0);
+
+	unsigned int numDiffuse = 0;
+	unsigned int numSpecular = 0;
+
+	for (unsigned int i = 0; i < textures.size(); i++) {
+		std::string num;
+		std::string type = textures[i].type;
+		if (type == "diffuse") {
+			num = std::to_string(numDiffuse++);
+		}
+		else if (type == "specular") {
+			num = std::to_string(numSpecular++);
+		}
+		textures[i].texUnit(shader, (type + num).c_str(), i);
+		textures[i].Bind();
+	}
+
+	glUniform3f(glGetUniformLocation(shader.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
+	camera.Matrix(shader, "camMatrix");
+
+	glDrawElements(GL_TRIANGLES, numTriangles, GL_UNSIGNED_INT, 0);
 	glBindVertexArray(0);
 }
 

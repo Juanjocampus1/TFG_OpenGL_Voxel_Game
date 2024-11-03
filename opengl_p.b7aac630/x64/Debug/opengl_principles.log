@@ -1,29 +1,3 @@
 ﻿  Main.cpp
-  chunk.cpp
-C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\chunk.cpp(23,20): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\chunk.cpp(24,21): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\chunk.cpp(25,22): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\src\chunk.cpp(114,32): warning C4267: '=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-  Generando código...
-glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(input.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_time.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_time.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_thread.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_thread.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(platform.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(platform.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(vulkan.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(wgl_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(wgl_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(egl_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(egl_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(osmesa_context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(osmesa_context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(null_init.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_init.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_module.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_module.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(win32_joystick.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(null_monitor.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_monitor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(null_window.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(null_joystick.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(null_joystick.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-  opengl_principles.vcxproj -> C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\x64\Debug\opengl_principles.exe
+  opengl_principles.vcxproj -> C:\Users\grogu\Source\Repos\TFG_OpenGL_Voxel_Game\x64\Debug\opengl_principles.exe
