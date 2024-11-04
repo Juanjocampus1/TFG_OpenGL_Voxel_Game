@@ -1,37 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\",
+  "WorkspaceRootPath": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -42,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 317,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,89 +46,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Light.cpp",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Light.cpp",
-              "RelativeDocumentMoniker": "src\\Light.cpp",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Light.cpp",
-              "RelativeToolTip": "src\\Light.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-03T13:51:43.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "block.cpp",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\block.cpp",
-              "RelativeDocumentMoniker": "src\\block.cpp",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\block.cpp",
-              "RelativeToolTip": "src\\block.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-03T13:36:14.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "chunk.cpp",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\chunk.cpp",
-              "RelativeDocumentMoniker": "src\\chunk.cpp",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\chunk.cpp",
-              "RelativeToolTip": "src\\chunk.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-18T17:07:39.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Main.cpp",
-              "RelativeDocumentMoniker": "src\\Main.cpp",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Main.cpp",
-              "RelativeToolTip": "src\\Main.cpp",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAH4AAABNAAAAAAAAAA==",
+              "Title": "chunk.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\chunk.cpp",
+              "RelativeDocumentMoniker": "src\\chunk.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\chunk.cpp",
+              "RelativeToolTip": "src\\chunk.cpp",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAABkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T17:36:45.043Z",
+              "WhenOpened": "2024-11-03T21:54:46.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "chunk.h",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\chunk.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\chunk.h",
               "RelativeDocumentMoniker": "src\\Header_files\\chunk.h",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\chunk.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\chunk.h",
               "RelativeToolTip": "src\\Header_files\\chunk.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-18T17:07:35.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Mesh.h",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\Mesh.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\Mesh.h",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\Mesh.h",
-              "RelativeToolTip": "src\\Header_files\\Mesh.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-19T19:02:52.274Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "block.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\block.cpp",
+              "RelativeDocumentMoniker": "src\\block.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\block.cpp",
+              "RelativeToolTip": "src\\block.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-03T13:36:14.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Main.cpp",
+              "RelativeDocumentMoniker": "src\\Main.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Main.cpp",
+              "RelativeToolTip": "src\\Main.cpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowHoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-17T17:36:45.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mesh.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\Mesh.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Mesh.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\Mesh.h",
+              "RelativeToolTip": "src\\Header_files\\Mesh.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-19T19:02:52.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Blocks.h",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\Blocks.h",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\Blocks.h",
               "RelativeDocumentMoniker": "src\\Header_files\\Blocks.h",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Header_files\\Blocks.h",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Header_files\\Blocks.h",
               "RelativeToolTip": "src\\Header_files\\Blocks.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -140,11 +120,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Mesh.cpp",
-              "DocumentMoniker": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Mesh.cpp",
+              "DocumentMoniker": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Mesh.cpp",
               "RelativeDocumentMoniker": "src\\Mesh.cpp",
-              "ToolTip": "C:\\Users\\grogu\\source\\repos\\TFG_OpenGL_Voxel_Game\\src\\Mesh.cpp",
+              "ToolTip": "E:\\deberes\\1\u00BA de DAM\\PROGRAMACION\\C\u002B\u002B\\OPENGL\\TFG\\src\\Mesh.cpp",
               "RelativeToolTip": "src\\Mesh.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

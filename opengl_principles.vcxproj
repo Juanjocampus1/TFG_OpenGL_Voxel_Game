@@ -71,20 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\opengl_principles\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

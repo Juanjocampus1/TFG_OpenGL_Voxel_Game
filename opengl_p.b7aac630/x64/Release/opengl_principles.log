@@ -1,7 +1,9 @@
 ﻿  chunk.cpp
-Main.obj : error LNK2005: ya se definió "unsigned int * cubeIndices" (?cubeIndices@@3PAIA) en chunk.obj
-Main.obj : error LNK2005: ya se definió "struct Vertex * lightVertices" (?lightVertices@@3PAUVertex@@A) en chunk.obj
-Main.obj : error LNK2005: ya se definió "struct Vertex * DirtGrassVertex" (?DirtGrassVertex@@3PAUVertex@@A) en chunk.obj
-Main.obj : error LNK2005: ya se definió "unsigned int * lightIndices" (?lightIndices@@3PAIA) en chunk.obj
+E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(142,29): warning C4267: '=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-C:\Users\grogu\source\repos\TFG_OpenGL_Voxel_Game\x64\Release\opengl_principles.exe : fatal error LNK1169: se encontraron uno o más símbolos definidos simultáneamente
+  Generando código
+  1 of 2330 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    40 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  opengl_principles.vcxproj -> E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\x64\Release\opengl_principles.exe

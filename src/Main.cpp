@@ -56,7 +56,7 @@ int main() {
 
     Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
 	Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
-	Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
+	Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
 
     glm::vec3 objectPos = glm::vec3(0.0f, 0.0f, 0.0f);
     glm::mat4 objectModel = glm::mat4(1.0f);
@@ -125,7 +125,7 @@ int main() {
 
         if (chunkSize != prevChunkSize) {
             cout << "Cambiando el tamaño del chunk a: " << chunkSize << endl;
-            chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
+            chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
             prevChunkSize = chunkSize;
         }
 
