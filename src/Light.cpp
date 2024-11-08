@@ -1,21 +1,33 @@
-#include<glm/glm.hpp>
-#include<glm/gtc/matrix_transform.hpp>
-#include<glm/gtc/type_ptr.hpp>
-#include<glm/gtx/rotate_vector.hpp>
-#include<glm/gtx/vector_angle.hpp>
+#include "Header_files/Light.h"
 
-class Light {
-public:
-    glm::vec3 position;
-    glm::vec3 color;
+Light::Light(glm::vec3 position, glm::vec4 color, std::vector<Vertex>& vertices, std::vector<GLuint>& indices, std::vector<Texture>& textures)
+    : position(position), color(color) {
+    model = glm::mat4(1.0f);
+    updateModel();
+    mesh = new Mesh(vertices, indices, textures);
+}
 
-    Light(glm::vec3 pos, glm::vec3 col) : position(pos), color(col) {}
+Light::~Light() {
+    delete mesh;
+}
 
-    void setPosition(const glm::vec3& pos) {
-        position = pos;
-    }
+void Light::setPosition(glm::vec3 newPosition) {
+    position = newPosition;
+    updateModel();
+}
 
-    void setColor(const glm::vec3& col) {
-        color = col;
-    }
-};
+void Light::setColor(glm::vec4 newColor) {
+    color = newColor;
+}
+
+void Light::updateModel() {
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, position);
+}
+
+void Light::render(Shader& shader, Camera& camera) {
+    shader.use();
+    glUniformMatrix4fv(glGetUniformLocation(shader.ID, "model"), 1, GL_FALSE, glm::value_ptr(model));
+    glUniform4f(glGetUniformLocation(shader.ID, "lightColor"), color.r, color.g, color.b, color.a);
+    mesh->Draw(shader, camera);
+}

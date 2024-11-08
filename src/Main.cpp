@@ -14,6 +14,33 @@ const unsigned int SCR_HEIGHT = 1080;
 int chunkSize = 16;
 int prevChunkSize = chunkSize;
 
+Vertex lightVertices[] = {
+    // Posiciones (x, y, z)
+    Vertex{glm::vec3(-0.1f, -0.1f,  0.1f)},
+    Vertex{glm::vec3(-0.1f, -0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f, -0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f, -0.1f,  0.1f)},
+    Vertex{glm::vec3(-0.1f,  0.1f,  0.1f)},
+    Vertex{glm::vec3(-0.1f,  0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f,  0.1f, -0.1f)},
+    Vertex{glm::vec3(0.1f,  0.1f,  0.1f)}
+};
+
+GLuint lightIndices[] = {
+    0, 1, 2,
+    0, 2, 3,
+    0, 4, 7,
+    0, 7, 3,
+    3, 7, 6,
+    3, 6, 2,
+    2, 6, 5,
+    2, 5, 1,
+    1, 5, 4,
+    1, 4, 0,
+    4, 5, 6,
+    4, 6, 7
+};
+
 // Función de callback para ajustar el tamaño del viewport
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
@@ -55,9 +82,32 @@ int main() {
     };
 
     Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
-	//Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
+    Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
 
-    Planet planet;
+    Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
+    std::vector <Vertex> lightVerts(lightVertices, lightVertices + sizeof(lightVertices) / sizeof(Vertex));
+    std::vector <GLuint> lightInd(lightIndices, lightIndices + sizeof(lightIndices) / sizeof(GLuint));
+    Mesh light(lightVerts, lightInd, textures);
+
+    glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+    glm::vec3 lightPos = glm::vec3(0.0f, 18.0f, 0.0f);
+    //glm::vec3 lightPos = glm::vec3(1.0f, 1.0f, 1.0f);
+    glm::mat4 lightModel = glm::mat4(1.0f);
+    lightModel = glm::translate(lightModel, lightPos);
+
+    glm::vec3 objectPos = glm::vec3(0.0f, 0.0f, 0.0f);
+    glm::mat4 objectModel = glm::mat4(1.0f);
+    objectModel = glm::translate(objectModel, objectPos);
+
+    lightShader.use();
+    glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
+    glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+    shaderProgram.use();
+    glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
+    glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+    glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+
+    //Planet planet;
 
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
@@ -117,23 +167,23 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
-        /*
+        
         if (chunkSize != prevChunkSize) {
             cout << "Cambiando el tamaño del chunk a: " << chunkSize << endl;
-            chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
+            chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
             prevChunkSize = chunkSize;
         }
-        */
+        
+        light.Draw(lightShader, camera);
+        chunk.Render(shaderProgram, camera);
 
-        //chunk.Render(shaderProgram, camera);
-
-		planet.GetChunkData(camera.Position.x, camera.Position.y, camera.Position.z);
+		//planet.GetChunkData(camera.Position.x, camera.Position.y, camera.Position.z);
 
         ImGui::Begin("Light Settings");
         ImGui::Text("Test");
         ImGui::Text("Camera Position: (%f, %f, %f)", camera.Position.x, camera.Position.y, camera.Position.z);
-        //ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
-        //ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
+        ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
+        ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
         ImGui::SliderInt("Chunk Size", &chunkSize, 1, 64);
         ImGui::End();
 
@@ -151,7 +201,8 @@ int main() {
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
     shaderProgram.Delete();
-    //chunk.~Chunk();
+	lightShader.Delete();
+    chunk.~Chunk();
 
     glfwDestroyWindow(window);
     glfwTerminate();

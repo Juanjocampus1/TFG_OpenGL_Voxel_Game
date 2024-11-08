@@ -1,38 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\",
+  "WorkspaceRootPath": "E:\\deberes\\2\u00BA DE DAM\\TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Light.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Light.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Planet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Planet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Planet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Planet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,104 +50,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Block.h",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Block.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\Block.h",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Block.h",
-              "RelativeToolTip": "src\\Header_files\\Block.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-08T09:53:44.773Z",
+              "DocumentIndex": 1,
+              "Title": "Light.cpp",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Light.cpp",
+              "RelativeDocumentMoniker": "src\\Light.cpp",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Light.cpp",
+              "RelativeToolTip": "src\\Light.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-08T21:17:25.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Blocks.h",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Blocks.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\Blocks.h",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Blocks.h",
-              "RelativeToolTip": "src\\Header_files\\Blocks.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Light.h",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Light.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Light.h",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Light.h",
+              "RelativeToolTip": "src\\Header_files\\Light.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-18T17:09:24.418Z",
+              "WhenOpened": "2024-11-08T21:16:55.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "block.cpp",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\block.cpp",
-              "RelativeDocumentMoniker": "src\\block.cpp",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\block.cpp",
-              "RelativeToolTip": "src\\block.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-03T13:36:14.059Z",
+              "Title": "Mesh.h",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Mesh.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Mesh.h",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Mesh.h",
+              "RelativeToolTip": "src\\Header_files\\Mesh.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-08T20:54:57.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Planet.cpp",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Planet.cpp",
-              "RelativeDocumentMoniker": "src\\Planet.cpp",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Planet.cpp",
-              "RelativeToolTip": "src\\Planet.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-08T09:04:24.969Z",
+              "DocumentIndex": 5,
+              "Title": "chunk.h",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\chunk.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\chunk.h",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\chunk.h",
+              "RelativeToolTip": "src\\Header_files\\chunk.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-08T20:29:09.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Planet.h",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Planet.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\Planet.h",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\Planet.h",
-              "RelativeToolTip": "src\\Header_files\\Planet.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-08T08:55:35.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "chunk.cpp",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\chunk.cpp",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\chunk.cpp",
               "RelativeDocumentMoniker": "src\\chunk.cpp",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\chunk.cpp*",
-              "RelativeToolTip": "src\\chunk.cpp*",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKkAAAABAAAAAAAAAA==",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\chunk.cpp",
+              "RelativeToolTip": "src\\chunk.cpp",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAIYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-03T21:54:46.246Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "chunk.h",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\chunk.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\chunk.h",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Header_files\\chunk.h",
-              "RelativeToolTip": "src\\Header_files\\chunk.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-18T17:07:35.476Z",
+              "DocumentIndex": 3,
+              "Title": "Planet.cpp",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Planet.cpp",
+              "RelativeDocumentMoniker": "src\\Planet.cpp",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Planet.cpp",
+              "RelativeToolTip": "src\\Planet.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-08T09:04:24.969Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Planet.h",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Planet.h",
+              "RelativeDocumentMoniker": "src\\Header_files\\Planet.h",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Planet.h",
+              "RelativeToolTip": "src\\Header_files\\Planet.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-08T08:55:35.958Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Main.cpp",
+              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Main.cpp",
               "RelativeDocumentMoniker": "src\\Main.cpp",
-              "ToolTip": "C:\\Users\\CampusFP\\Desktop\\dam_2\\TFG\\src\\Main.cpp",
-              "RelativeToolTip": "src\\Main.cpp",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJkAAAAVAAAAAAAAAA==",
+              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Main.cpp*",
+              "RelativeToolTip": "src\\Main.cpp*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAwwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-17T17:36:45.043Z",
               "EditorCaption": ""

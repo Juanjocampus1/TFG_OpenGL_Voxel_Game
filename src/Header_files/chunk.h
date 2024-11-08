@@ -2,21 +2,12 @@
 
 #include "Mesh.h"
 
-struct ChunkVertex {
-
-    glm::vec3 position;
-    glm::vec2 texCoords;
-
-    ChunkVertex(glm::vec3 pos, glm::vec2 tex)
-        : position(pos), texCoords(tex) {}
-};
-
 class Chunk {
 public:
-    Chunk(unsigned int chunkSize, glm::vec3 chunkPos);
+    Chunk(unsigned int chunkSize, glm::vec3 chunkPos, std::vector<Texture>& textures);
     ~Chunk();
 
-    void GenerateChunk();
+    void GenerateChunk(std::vector<Texture>& textures);
     void Render(Shader& shader, Camera& camera);
     int GetCubeCount() const;
     static int GetChunkCount();
@@ -32,4 +23,5 @@ private:
     unsigned int numTriangles;
     unsigned int vao, vbo, ebo;
     static int chunkCount;
+	Mesh* mesh;
 };

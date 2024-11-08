@@ -71,20 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\2º DE DAM\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\2º DE DAM\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\CampusFP\Desktop\dam_2\TFG\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\CampusFP\Desktop\dam_2\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\2º DE DAM\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\2º DE DAM\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\2º DE DAM\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\2º DE DAM\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\CampusFP\Desktop\dam_2\TFG\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\CampusFP\Desktop\dam_2\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\deberes\2º DE DAM\TFG\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\deberes\2º DE DAM\TFG\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -193,6 +193,7 @@
     <ClInclude Include="src\Header_files\Block.h" />
     <ClInclude Include="src\Header_files\Blocks.h" />
     <ClInclude Include="src\Header_files\chunk.h" />
+    <ClInclude Include="src\Header_files\Light.h" />
     <ClInclude Include="src\Header_files\Mesh.h" />
     <ClInclude Include="src\Header_files\Planet.h" />
     <ClInclude Include="src\Header_files\shader.h" />

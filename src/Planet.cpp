@@ -1,4 +1,4 @@
-#include "Header_files/Planet.h"
+/*#include "Header_files/Planet.h"
 
 Planet::Planet() {
 	for (int x = -renderDistance; x < renderDistance; x++) {
@@ -29,3 +29,4 @@ std::vector<unsigned int> Planet::GenerateChunkData(int chunkX, int chunkY, int 
 	}
 	return chunkData;
 }
+*/
