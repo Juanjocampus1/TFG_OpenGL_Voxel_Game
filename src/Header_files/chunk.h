@@ -1,11 +1,6 @@
 #pragma once
 
-#include <vector>
-#include <glm/glm.hpp>
-#include <glad/glad.h>
-#include "Camera.h"
-#include "Shader.h"
-#include "texture.h"
+#include "Mesh.h"
 
 struct ChunkVertex {
 

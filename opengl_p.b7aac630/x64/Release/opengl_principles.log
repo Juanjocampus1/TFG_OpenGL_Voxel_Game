@@ -1,9 +1,70 @@
 ﻿  chunk.cpp
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(142,29): warning C4267: '=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-  Generando código
-  1 of 2330 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    40 functions had inline decision re-evaluated but remain unchanged
-  Generación de código finalizada
-  opengl_principles.vcxproj -> E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\x64\Release\opengl_principles.exe
+C:\Users\CampusFP\Desktop\dam_2\TFG\src\chunk.cpp(138,29): warning C4267: '=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  Planet.cpp
+C:\Users\CampusFP\Desktop\dam_2\TFG\src\Planet.cpp(21,29): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\CampusFP\Desktop\dam_2\TFG\src\Planet.cpp(22,30): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\CampusFP\Desktop\dam_2\TFG\src\Planet.cpp(23,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(308,17): error C2661: 'Chunk::Chunk': ninguna función sobrecargada acepta 3 argumentos
+  (compilando archivo de origen "src/Planet.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(308,17):
+      al hacer coincidir la lista de argumentos '(int, _Ty, _Ty)'
+          with
+          [
+              _Ty=std::vector<GLuint,std::allocator<GLuint>>
+          ]
+          and
+          [
+              _Ty=glm::vec3
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(308,17):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          C:\Users\CampusFP\Desktop\dam_2\TFG\src\Planet.cpp(9,12):
+          Vea la referencia a la creación de una instancia de la función plantilla "std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,bool> std::unordered_map<std::string,Chunk,std::hash<std::string>,std::equal_to<std::string>,std::allocator<_Ty>>::try_emplace<int&,std::vector<GLuint,std::allocator<GLuint>>,glm::vec3>(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &,int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::vec3 &&)" que se está compilando
+          with
+          [
+              _Ty=std::pair<const std::string,Chunk>
+          ]
+              C:\Users\CampusFP\Desktop\dam_2\TFG\src\Planet.cpp(9,23):
+              vea la primera referencia a “std::unordered_map<std::string,Chunk,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,Chunk>>>::try_emplace” en “Planet::Planet”
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(281,36):
+          Vea la referencia a la creación de una instancia de la función plantilla "std::pair<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Hash<std::_Umap_traits<_Kty,Chunk,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::_Try_emplace<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,int&,std::vector<GLuint,std::allocator<GLuint>>,glm::tvec3<float,glm::packed_highp>>(_Keyty,int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::tvec3<float,glm::packed_highp> &&)" que se está compilando
+          with
+          [
+              _Ty=std::pair<const std::string,Chunk>,
+              _Alloc=std::allocator<std::pair<const std::string,Chunk>>,
+              _Kty=std::string,
+              _Hasher=std::hash<std::string>,
+              _Keyeq=std::equal_to<std::string>,
+              _Keyty=const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xhash(699,49):
+          Vea la referencia a la creación de una instancia de la función plantilla "std::_List_node_emplace_op2<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_List_node_emplace_op2<const std::piecewise_construct_t&,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::tvec3<float,glm::packed_highp> &&>>(_Alnode &,const std::piecewise_construct_t &,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &> &&,std::tuple<int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::tvec3<float,glm::packed_highp> &&> &&)" que se está compilando
+          with
+          [
+              _Ty=std::pair<const std::string,Chunk>,
+              _Alloc=std::allocator<std::pair<const std::string,Chunk>>,
+              _Alnode=std::allocator<std::_List_node<std::pair<const std::string,Chunk>,std::_Default_allocator_traits<std::allocator<std::pair<const std::string,Chunk>>>::void_pointer>>
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\list(585,25):
+          Vea la referencia a la creación de una instancia de la función plantilla "void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const std::piecewise_construct_t&,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::tvec3<float,glm::packed_highp> &&>>(_Alloc &,_Objty *const ,const std::piecewise_construct_t &,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &> &&,std::tuple<int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::tvec3<float,glm::packed_highp> &&> &&)" que se está compilando
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const std::string,Chunk>,std::_Default_allocator_traits<std::allocator<std::pair<const std::string,Chunk>>>::void_pointer>>,
+              _Ty=std::pair<const std::string,Chunk>,
+              _Objty=std::pair<const std::string,Chunk>
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xmemory(700,82):
+          Vea la referencia a la creación de una instancia de la función plantilla "std::pair<const std::string,Chunk>::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,int&,_Ty&&,glm::tvec3<float,glm::packed_highp>&&>(std::piecewise_construct_t,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<int &,_Ty &&,glm::tvec3<float,glm::packed_highp> &&>)" que se está compilando
+          with
+          [
+              _Ty=std::vector<GLuint,std::allocator<GLuint>>
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(312,15):
+          Vea la referencia a la creación de una instancia de la función plantilla "std::pair<const std::string,Chunk>::pair<std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<int &,_Ty &&,glm::tvec3<float,glm::packed_highp> &&>,0,0,1,2>(_Tuple1 &,_Tuple2 &,std::integer_sequence<size_t,0>,std::integer_sequence<size_t,0,1,2>)" que se está compilando
+          with
+          [
+              _Ty=std::vector<GLuint,std::allocator<GLuint>>,
+              _Tuple1=std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,
+              _Tuple2=std::tuple<int &,std::vector<GLuint,std::allocator<GLuint>> &&,glm::vec3 &&>
+          ]
+  

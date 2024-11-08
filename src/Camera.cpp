@@ -60,6 +60,15 @@ void Camera::Inputs(GLFWwindow* window){
 		speed = 0.1f;
 	}
 
+	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
+		wireframeMode = !wireframeMode;
+		if (wireframeMode) {
+			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		}
+		else {
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		}
+	}
 
 	// Handles mouse inputs
 	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)

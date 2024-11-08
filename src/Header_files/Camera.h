@@ -26,6 +26,7 @@ public:
 	// Stores the width and height of the window
 	int width;
 	int height;
+	bool wireframeMode = false;
 
 	// Adjust the speed of the camera and it's sensitivity when looking around
 	float speed = 0.1f;

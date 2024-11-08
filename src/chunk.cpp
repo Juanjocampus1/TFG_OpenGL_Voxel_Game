@@ -1,8 +1,4 @@
 #include "Header_files/chunk.h"
-#include "Header_files/vao.h"
-#include "Header_files/vbo.h"
-#include "Header_files/ebo.h"
-#include "Header_files/Camera.h"
 
 int Chunk::chunkCount = 0;
 
@@ -165,9 +161,6 @@ void Chunk::GenerateChunk() {
 void Chunk::Render(Shader& shader, Camera& camera) {
 	shader.use();
 	glBindVertexArray(vao);
-
-	unsigned int numDiffuse = 0;
-	unsigned int numSpecular = 0;
 
 	glUniform3f(glGetUniformLocation(shader.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
 	camera.Matrix(shader, "camMatrix");

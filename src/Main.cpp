@@ -4,7 +4,7 @@
 
 #include "Header_files/Mesh.h"
 #include "Header_files/Chunk.h"
-#include "Light.cpp"
+#include "Header_files/Planet.h"
 
 using namespace std;
 
@@ -55,15 +55,9 @@ int main() {
     };
 
     Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
-	Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
-	Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
+	//Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
 
-    glm::vec3 objectPos = glm::vec3(0.0f, 0.0f, 0.0f);
-    glm::mat4 objectModel = glm::mat4(1.0f);
-    objectModel = glm::translate(objectModel, objectPos);
-
-    shaderProgram.use();
-    glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
+    Planet planet;
 
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
@@ -123,19 +117,23 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
+        /*
         if (chunkSize != prevChunkSize) {
             cout << "Cambiando el tamaño del chunk a: " << chunkSize << endl;
             chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f));
             prevChunkSize = chunkSize;
         }
+        */
 
-        chunk.Render(shaderProgram, camera);
+        //chunk.Render(shaderProgram, camera);
+
+		planet.GetChunkData(camera.Position.x, camera.Position.y, camera.Position.z);
 
         ImGui::Begin("Light Settings");
         ImGui::Text("Test");
         ImGui::Text("Camera Position: (%f, %f, %f)", camera.Position.x, camera.Position.y, camera.Position.z);
-        ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
-        ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
+        //ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
+        //ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
         ImGui::SliderInt("Chunk Size", &chunkSize, 1, 64);
         ImGui::End();
 
@@ -153,8 +151,7 @@ int main() {
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
     shaderProgram.Delete();
-	lightShader.Delete();
-	chunk.~Chunk();
+    //chunk.~Chunk();
 
     glfwDestroyWindow(window);
     glfwTerminate();
