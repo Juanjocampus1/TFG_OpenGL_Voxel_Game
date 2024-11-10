@@ -1,4 +1,5 @@
 #include "Header_files/chunk.h"
+#include "Header_files/Blocks.h"
 
 int Chunk::chunkCount = 0;
 
@@ -24,17 +25,28 @@ void Chunk::GenerateChunk(std::vector<Texture>& textures) {
 		for (unsigned int y = 0; y < chunkSize; y++) {
 			for (unsigned int z = 0; z < chunkSize; z++) {
 
-				//chunkData.push_back(0); //empty block
-				chunkData.push_back(1); //solid block
-				//chunkData.push_back(((x + y + z) % 2 == 0) ? 1 : 0); //checkerboard patern
+				unsigned int blockType;
+				if (y <= 9) {
+					blockType = Blocks::STONE_BLOCK;
+				}
+				else if (y <= 14) {
+					blockType = Blocks::DIRT_BLOCK;
+				}
+				else {
+					blockType = Blocks::GRASS_BLOCK;
+				}
+
+				chunkData.push_back(blockType);
+				// Obtener las coordenadas de textura del bloque
+				Block block = Blocks::blocks[blockType];
 
 				//north face
 				int northIndex = x * chunkSize * chunkSize + y * chunkSize + (z - 1);
-				if (z <= 0 || chunkData[northIndex] == 0) {
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)});
+				if (z <= 0 || chunkData[northIndex] == Blocks::AIR) {
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(1.0f, 0.0f, 0.0f), block.sideMin }); //arriba izquierda
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f), block.sideMax }); //arriba derecha
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 1.0f), block.sideMax }); //abajo izquierda
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(1.0f, 1.0f, 0.0f), block.sideMin }); //abajo derecha
 
 					indices.push_back(currentVertices + 0);
 					indices.push_back(currentVertices + 3);
@@ -47,11 +59,11 @@ void Chunk::GenerateChunk(std::vector<Texture>& textures) {
 
 				//south face
 				int southIndex = x * chunkSize * chunkSize + 0 * chunkSize + y;
-				if (z >= chunkSize - 1 || chunkData[southIndex] == 0) {
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 1.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)});
+				if (z >= chunkSize - 1 || chunkData[southIndex] == Blocks::AIR) {
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 1.0f), block.sideMin });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 1.0f), block.sideMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), block.sideMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), block.sideMin });
 
 					indices.push_back(currentVertices + 0);
 					indices.push_back(currentVertices + 3);
@@ -64,11 +76,11 @@ void Chunk::GenerateChunk(std::vector<Texture>& textures) {
 
 				//west face
 				int westIndex = x * chunkSize * chunkSize + y * chunkSize + (z - 1);
-				if (x <= 0 || chunkData[westIndex] == 0) {
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 0.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 0.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)});
+				if (x <= 0 || chunkData[westIndex] == Blocks::AIR) {
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 0.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), block.sideMin });
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 0.0f, 1.0f), block.sideMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 0.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), block.sideMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), block.sideMin });
 
 					indices.push_back(currentVertices + 0);
 					indices.push_back(currentVertices + 3);
@@ -81,11 +93,11 @@ void Chunk::GenerateChunk(std::vector<Texture>& textures) {
 
 				//east face
 				int eastIndex = x * chunkSize * chunkSize + y * chunkSize + z;
-				if (x >= chunkSize - 1 || chunkData[eastIndex] == 0) {
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), glm::vec2(32.0f / 32.0f, 16.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 16.0f / 32.0f)});
+				if (x >= chunkSize - 1 || chunkData[eastIndex] == Blocks::AIR) {
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), block.sideMin });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 1.0f), block.sideMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), block.sideMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), block.sideMin });
 
 					indices.push_back(currentVertices + 0);
 					indices.push_back(currentVertices + 3);
@@ -98,11 +110,11 @@ void Chunk::GenerateChunk(std::vector<Texture>& textures) {
 
 				//bottom face
 				int bottomIndex = x * chunkSize * chunkSize + y * chunkSize + z;
-				if (y <= 0 || chunkData[bottomIndex] == 0) {
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(0.0f / 32.0f, 1.0f - 32.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 32.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(16.0f / 32.0f, 1.0f - 32.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(0.0f / 32.0f, 1.0f - 32.0f / 32.0f)});
+				if (y <= 0 || chunkData[bottomIndex] == Blocks::AIR) {
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), block.bottomMin });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 0.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), block.bottomMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 0.0f, z + 1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), block.bottomMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 0.0f, z + 1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), block.bottomMin });
 
 					indices.push_back(currentVertices + 0);
 					indices.push_back(currentVertices + 3);
@@ -112,15 +124,15 @@ void Chunk::GenerateChunk(std::vector<Texture>& textures) {
 					indices.push_back(currentVertices + 3);
 					currentVertices += 4;
 				}
-				
+
 
 				//top face
 				int topIndex = x * chunkSize * chunkSize + y * chunkSize + z;
-				if (y >= chunkSize - 1 || chunkData[topIndex] == 0) {
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(32.0f / 32.0f, 1.0f - 0.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(32.0f / 32.0f, 1.0f - 16.0f / 32.0f)});
-					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), glm::vec2(16.0f / 32.0f, 1.0f - 16.0f / 32.0f)});
+				if (y >= chunkSize - 1 || chunkData[topIndex] == Blocks::AIR) {
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1.0f, 0.0f, 0.0f), block.topMin });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), block.topMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 0.0f, y + 1.0f, z + 1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), block.topMax });
+					vertices.push_back(Vertex{ glm::vec3(x + 1.0f, y + 1.0f, z + 1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1.0f, 1.0f, 0.0f), block.topMin });
 
 					indices.push_back(currentVertices + 0);
 					indices.push_back(currentVertices + 1);
@@ -149,7 +161,14 @@ void Chunk::Render(Shader& shader, Camera& camera) {
 }
 
 int Chunk::GetCubeCount() const {
-	return chunkSize * chunkSize * chunkSize;
+	//contar cubos en chunk segun las caras
+	int count = 0;
+	for (unsigned int i = 0; i < chunkData.size(); i++) {
+		if (chunkData[i] != 0) {
+			count++;
+		}
+	}
+	return count;
 }
 
 int Chunk::GetChunkCount() {

@@ -1,14 +1,18 @@
 #pragma once
 
-struct Block
-{
-public:
-	char topMinX, topMinY, topMaxX, topMaxY;
-	char bottomMinX, bottomMinY, bottomMaxX, bottomMaxY;
-	char sideMinX, sideMinY, sideMaxX, sideMaxY;
+#include <glm/glm.hpp>
 
-	Block(char minX, char minY, char maxX, char maxY);
-	Block(char topMinX, char topMinY, char topMaxX, char topMaxY,
-		char bottomMinX, char bottomMinY, char bottomMaxX, char bottomMaxY,
-		char sideMinX, char sideMinY, char sideMaxX, char sideMaxY);
+struct Block {
+public:
+    glm::vec2 topMin;
+    glm::vec2 topMax;
+    glm::vec2 bottomMin;
+    glm::vec2 bottomMax;
+    glm::vec2 sideMin;
+    glm::vec2 sideMax;
+
+    Block(glm::vec2 min, glm::vec2 max);
+    Block(glm::vec2 topMin, glm::vec2 topMax,
+        glm::vec2 bottomMin, glm::vec2 bottomMax,
+        glm::vec2 sideMin, glm::vec2 sideMax);
 };

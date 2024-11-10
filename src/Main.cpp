@@ -12,7 +12,10 @@ const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
 
 int chunkSize = 16;
-int prevChunkSize = chunkSize;
+
+GLfloat lightPosZ = 16.0f;
+GLfloat lightPosX = 0.0f;
+GLfloat lightPosY = 0.0f;
 
 Vertex lightVertices[] = {
     // Posiciones (x, y, z)
@@ -76,21 +79,26 @@ int main() {
     // Ajuste del tamaño del viewport
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    std::vector<Texture> textures = {
+    Texture textures[]{
         Texture("Texture_atlas.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE),
         Texture("Texture_atlas_specular.png", "specular", 1, GL_RED, GL_UNSIGNED_BYTE)
     };
 
     Shader shaderProgram("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl");
-    Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
+	shaderProgram.use();
+    shaderProgram.setFloat("texMultiplier", .5f);
+
+    std::vector <Texture> tex(textures, textures + sizeof(textures) / sizeof(Texture));
+    Chunk chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), tex);
 
     Shader lightShader("shaders/light_vertex_shader.glsl", "shaders/light_fragment_shader.glsl");
+	lightShader.use();
     std::vector <Vertex> lightVerts(lightVertices, lightVertices + sizeof(lightVertices) / sizeof(Vertex));
     std::vector <GLuint> lightInd(lightIndices, lightIndices + sizeof(lightIndices) / sizeof(GLuint));
-    Mesh light(lightVerts, lightInd, textures);
+    Mesh light(lightVerts, lightInd, tex);
 
     glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-    glm::vec3 lightPos = glm::vec3(0.0f, 18.0f, 0.0f);
+    glm::vec3 lightPos = glm::vec3(lightPosX, lightPosZ, lightPosY);
     //glm::vec3 lightPos = glm::vec3(1.0f, 1.0f, 1.0f);
     glm::mat4 lightModel = glm::mat4(1.0f);
     lightModel = glm::translate(lightModel, lightPos);
@@ -106,8 +114,6 @@ int main() {
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
     glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
     glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
-
-    //Planet planet;
 
     // Habilitar pruebas de profundidad y renderizado de caras ocultas
     glEnable(GL_DEPTH_TEST);
@@ -167,24 +173,30 @@ int main() {
         // Procesar entrada de la cámara
         camera.UpdateMatrix(45.0f, 0.1f, 100.0f);
 
-        
-        if (chunkSize != prevChunkSize) {
-            cout << "Cambiando el tamaño del chunk a: " << chunkSize << endl;
-            chunk = Chunk(chunkSize, glm::vec3(0.0f, 0.0f, 0.0f), textures);
-            prevChunkSize = chunkSize;
-        }
-        
+        lightPos = glm::vec3(lightPosX, lightPosZ, lightPosY);
+
+        // Actualizar la posición de la luz en el shader
+        lightModel = glm::mat4(1.0f);
+        lightModel = glm::translate(lightModel, lightPos);
+        lightShader.use();
+        glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
+        glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+        shaderProgram.use();
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
+        glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+        glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+
         light.Draw(lightShader, camera);
         chunk.Render(shaderProgram, camera);
-
-		//planet.GetChunkData(camera.Position.x, camera.Position.y, camera.Position.z);
 
         ImGui::Begin("Light Settings");
         ImGui::Text("Test");
         ImGui::Text("Camera Position: (%f, %f, %f)", camera.Position.x, camera.Position.y, camera.Position.z);
         ImGui::Text("Cube Count: %u", chunk.GetCubeCount());
         ImGui::Text("chunks generated: %u", chunk.GetChunkCount());
-        ImGui::SliderInt("Chunk Size", &chunkSize, 1, 64);
+		ImGui::SliderFloat("Light Position Z", &lightPosZ, -32.0f, 32.0f);
+		ImGui::SliderFloat("Light Position X", &lightPosX, -32.0f, 32.0f);
+		ImGui::SliderFloat("Light Position Y", &lightPosY, -32.0f, 32.0f);
         ImGui::End();
 
         // Rendering

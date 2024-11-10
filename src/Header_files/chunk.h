@@ -17,11 +17,12 @@ public:
     glm::vec3 chunkPos;
     bool ready;
     bool generated;
+    Mesh* mesh;
 
 private:
     unsigned int chunkSize;
     unsigned int numTriangles;
     unsigned int vao, vbo, ebo;
     static int chunkCount;
-	Mesh* mesh;
+	
 };

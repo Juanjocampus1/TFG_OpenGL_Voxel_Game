@@ -1,5 +1,7 @@
 #version 330 core
 
+
+
 // Outputs colors in RGBA
 out vec4 FragColor;
 
@@ -12,8 +14,6 @@ in vec3 color;
 // Imports the texture coordinates from the Vertex Shader
 in vec2 texCoord;
 
-
-
 // Gets the Texture Units from the main function
 uniform sampler2D diffuse0;
 uniform sampler2D specular0;
@@ -25,8 +25,8 @@ uniform vec3 lightPos;
 uniform vec3 camPos;
 
 
-vec4 pointLight()
-{	
+vec4 pointLight(){
+
 	// used in two variables so I calculate it here to not have to do it twice
 	vec3 lightVec = lightPos - crntPos;
 
@@ -109,7 +109,7 @@ vec4 spotLight()
 
 void main()
 {
-	// outputs final color
+	//outputs final color
 	//FragColor = spotLight();
 	//FragColor = direcLight();
 	FragColor = pointLight();

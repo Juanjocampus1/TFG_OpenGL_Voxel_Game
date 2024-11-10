@@ -8,11 +8,11 @@
 
 class Planet{
 	public:
-		Planet();
+		Planet(std::vector<Texture> textures);
 		~Planet();
 
 		std::vector<unsigned int>GetChunkData(int chunkX, int chunkY, int chunkZ);
-		void Update(float camX, float camY, float camZ, unsigned int modelLoc);
+		void Update(float camX, float camY, float camZ, Shader& shader, Camera& camera, std::vector<Texture> textures);
 
 	private:
 		std::vector<unsigned int> GenerateChunkData(int chunkX, int chunkY, int chunkZ);

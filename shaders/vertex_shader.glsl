@@ -1,5 +1,6 @@
 #version 330 core
 
+
 // Positions/Coordinates
 layout (location = 0) in vec3 aPos;
 // Normals (not necessarily normalized)
@@ -19,12 +20,12 @@ out vec3 color;
 // Outputs the texture coordinates to the Fragment Shader
 out vec2 texCoord;
 
-
-
 // Imports the camera matrix from the main function
 uniform mat4 camMatrix;
 // Imports the model matrix from the main function
 uniform mat4 model;
+//imports text multiplier
+uniform float texMultiplier;
 
 
 void main()
@@ -36,7 +37,7 @@ void main()
 	// Assigns the colors from the Vertex Data to "color"
 	color = aColor;
 	// Assigns the texture coordinates from the Vertex Data to "texCoord"
-	texCoord = aTex;
+	texCoord = aTex * texMultiplier;
 	
 	// Outputs the positions/coordinates of all vertices
 	gl_Position = camMatrix * vec4(crntPos, 1.0);
