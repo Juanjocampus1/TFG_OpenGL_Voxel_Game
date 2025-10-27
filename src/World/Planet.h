@@ -32,6 +32,18 @@ private:
     size_t batchIndexCount = 0; // number of indices uploaded
     bool batchDirty = true;
 
+    // Slot allocator info
+    struct SlotInfo {
+        size_t vertOffsetBytes = 0;
+        size_t vertSizeBytes = 0;
+        size_t idxOffsetBytes = 0;
+        size_t idxSizeBytes = 0;
+        size_t vertexBase = 0; // base vertex index (in number of vertices)
+    };
+    std::map<std::tuple<int, int, int>, SlotInfo> slotMap; // chunk key -> slot info
+    size_t totalVertBytes = 0;
+    size_t totalIndexBytes = 0;
+
     // Thread pool for chunk generation
     std::vector<std::thread> workers;
     std::queue<std::tuple<int, int, int>> taskQueue;
@@ -46,7 +58,7 @@ public:
     ~Planet();
     void setCameraPos(const glm::vec3& pos);
     void updateChunks();
-    Chunk* getChunk(int x, int, int);
+    Chunk* getChunk(int x, int y, int z);
     void draw(class Shader& shader, class Camera& camera);
     int loaded, unloaded;
 
@@ -55,4 +67,7 @@ private:
     void loadChunksAround();
     void unloadChunks();
     void workerLoop();
+
+    int allocateSlot(const std::tuple<int, int, int>& key, size_t vertBytes, size_t idxBytes);
+    void freeSlot(const std::tuple<int, int, int>& key);
 };

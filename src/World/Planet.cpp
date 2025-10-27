@@ -183,11 +183,38 @@ void Planet::unloadChunks() {
     }
 }
 
+int Planet::allocateSlot(const std::tuple<int,int,int>& key, size_t vertBytes, size_t idxBytes) {
+    // allocate contiguous space at the end
+    SlotInfo info;
+    info.vertOffsetBytes = totalVertBytes;
+    info.vertSizeBytes = vertBytes;
+    info.idxOffsetBytes = totalIndexBytes;
+    info.idxSizeBytes = idxBytes;
+    info.vertexBase = (totalVertBytes / sizeof(float)) /5; //5 floats per vertex
+
+    slotMap[key] = info;
+
+    totalVertBytes += vertBytes;
+    totalIndexBytes += idxBytes;
+
+    // return dummy slot id as not used elsewhere
+    return 0;
+}
+
+void Planet::freeSlot(const std::tuple<int,int,int>& key) {
+    auto it = slotMap.find(key);
+    if (it != slotMap.end()) {
+        // mark removed (we don't compact buffers to keep implementation simple)
+        slotMap.erase(it);
+    }
+}
+
 void Planet::draw(class Shader& shader, class Camera& camera) {
     std::lock_guard<std::mutex> lock(chunksMutex);
 
     // Rebuild meshes on main thread for any dirty chunks (creates rawVertices & indices)
     bool anyRebuilt = false;
+    std::vector<std::tuple<int,int,int>> rebuiltKeys;
     for (auto& pair : chunks) {
         Chunk* c = pair.second;
         if (c->meshDirty) {
@@ -201,12 +228,13 @@ void Planet::draw(class Shader& shader, class Camera& camera) {
             c->meshDirty = false;
             c->meshBuilt = true;
             anyRebuilt = true;
+            rebuiltKeys.push_back(pair.first);
         }
     }
 
     if (anyRebuilt) batchDirty = true; // mark batch dirty so we upload new data
 
-    // If batch not dirty, just draw existing buffers
+    // If no rebuilds and batch is clean, draw existing buffers
     if (!batchDirty && batchVao) {
         shader.use();
         shader.setMat4("model", glm::mat4(1.0f));
@@ -218,108 +246,106 @@ void Planet::draw(class Shader& shader, class Camera& camera) {
         return;
     }
 
-    // Collect total required sizes
-    size_t totalFloats =0;
-    size_t totalIndices =0;
+    // Build list of chunks that have meshes
+    std::vector<std::pair<std::tuple<int,int,int>, Chunk*>> chunkList;
+    chunkList.reserve(chunks.size());
     for (auto& pair : chunks) {
-        Chunk* c = pair.second;
-        if (!c->hasMeshBuilt()) continue;
-        totalFloats += c->getRawVertices().size() / sizeof(float);
-        totalIndices += c->getIndices().size();
+        if (!pair.second->hasMeshBuilt()) continue;
+        chunkList.emplace_back(pair.first, pair.second);
     }
 
-    if (totalFloats ==0 || totalIndices ==0) return;
+    // For each chunk, ensure it has a slot and upload only that slot if needed
+    // First, make sure we have batch buffers large enough
+    if (!batchVao) batchVao = new VAO();
+    // Ensure batch VBO/EBO exist with at least current totals
+    if (!batchVbo) {
+        batchVbo = new VBO(nullptr, static_cast<GLsizeiptr>(totalVertBytes));
+        batchVertCapacity = totalVertBytes;
+    }
+    if (!batchEbo) {
+        batchEbo = new EBO(nullptr, static_cast<GLsizeiptr>(totalIndexBytes));
+        batchIndexCapacity = totalIndexBytes;
+    }
 
-    // Prepare aggregated buffers
-    std::vector<float> allVerts;
-    std::vector<unsigned int> allIndices;
-    allVerts.reserve(totalFloats);
-    allIndices.reserve(totalIndices);
-
-    for (auto& pair : chunks) {
-        Chunk* c = pair.second;
-        if (!c->hasMeshBuilt()) continue;
+    // Allocate slots as needed (this updates totalVertBytes/totalIndexBytes)
+    for (size_t ci =0; ci < chunkList.size(); ++ci) {
+        const auto& key = chunkList[ci].first;
+        Chunk* c = chunkList[ci].second;
         const std::vector<char>& rv = c->getRawVertices();
         const std::vector<unsigned int>& idx = c->getIndices();
         if (rv.empty() || idx.empty()) continue;
-        const float* fv = reinterpret_cast<const float*>(rv.data());
-        size_t numFloats = rv.size() / sizeof(float);
-        size_t numVerts = numFloats /5; //5 floats per vertex
-        unsigned int vertexOffset = static_cast<unsigned int>(allVerts.size() /5);
-        // transform vertex positions to world space and append
-        for (size_t v =0; v < numVerts; ++v) {
-            float lx = fv[v *5 +0];
-            float ly = fv[v *5 +1];
-            float lz = fv[v *5 +2];
-            float u = fv[v *5 +3];
-            float vv = fv[v *5 +4];
-            float wx = lx + c->position.x * (float)Chunk::SIZE;
-            float wy = ly + c->position.y * (float)Chunk::SIZE;
-            float wz = lz + c->position.z * (float)Chunk::SIZE;
-            allVerts.push_back(wx);
-            allVerts.push_back(wy);
-            allVerts.push_back(wz);
-            allVerts.push_back(u);
-            allVerts.push_back(vv);
+        size_t vertBytes = rv.size();
+        size_t idxBytes = idx.size() * sizeof(unsigned int);
+        auto it = slotMap.find(key);
+        if (it == slotMap.end()) {
+            allocateSlot(key, vertBytes, idxBytes);
+        } else {
+            // if existing slot too small, free and reallocate
+            SlotInfo existing = it->second;
+            if (existing.vertSizeBytes < vertBytes || existing.idxSizeBytes < idxBytes) {
+                freeSlot(key);
+                allocateSlot(key, vertBytes, idxBytes);
+            }
         }
-        for (unsigned int i : idx) allIndices.push_back(i + vertexOffset);
     }
 
-    // Create persistent buffers if needed
-    if (!batchVao) batchVao = new VAO();
-    if (!batchVbo || batchVertCapacity < allVerts.size()) {
-        if (batchVbo) { batchVbo->deleteBuffer(); delete batchVbo; }
-        batchVbo = new VBO(nullptr, static_cast<GLsizeiptr>(allVerts.size() * sizeof(float)));
-        batchVertCapacity = allVerts.size();
+    // If totals changed (due to allocations), reallocate GPU buffers to new sizes
+    if (!batchVbo) batchVbo = new VBO(nullptr, static_cast<GLsizeiptr>(totalVertBytes));
+    if (!batchEbo) batchEbo = new EBO(nullptr, static_cast<GLsizeiptr>(totalIndexBytes));
+    if (totalVertBytes > batchVertCapacity) {
+        batchVbo->bind();
+        glBufferData(GL_ARRAY_BUFFER, (GLsizeiptr)totalVertBytes, nullptr, GL_DYNAMIC_DRAW);
+        batchVertCapacity = totalVertBytes;
     }
-    if (!batchEbo || batchIndexCapacity < allIndices.size()) {
-        if (batchEbo) { batchEbo->deleteEBO(); delete batchEbo; }
-        batchEbo = new EBO(nullptr, static_cast<GLsizeiptr>(allIndices.size() * sizeof(unsigned int)));
-        batchIndexCapacity = allIndices.size();
+    if (totalIndexBytes > batchIndexCapacity) {
+        batchEbo->bind();
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, (GLsizeiptr)totalIndexBytes, nullptr, GL_DYNAMIC_DRAW);
+        batchIndexCapacity = totalIndexBytes;
     }
 
-    // Upload data using glMapBufferRange for better performance
-    batchVao->bind();
+    // Now upload per-slot data
     batchVbo->bind();
-    GLsizeiptr vertSizeBytes = static_cast<GLsizeiptr>(allVerts.size() * sizeof(float));
-    // allocate if needed
-    if (batchVertCapacity * sizeof(float) < vertSizeBytes) {
-        glBufferData(GL_ARRAY_BUFFER, vertSizeBytes, nullptr, GL_DYNAMIC_DRAW);
-        batchVertCapacity = allVerts.size();
-    }
-    void* dst = glMapBufferRange(GL_ARRAY_BUFFER,0, vertSizeBytes, GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_RANGE_BIT | GL_MAP_UNSYNCHRONIZED_BIT);
-    if (dst) {
-        memcpy(dst, allVerts.data(), vertSizeBytes);
-        glUnmapBuffer(GL_ARRAY_BUFFER);
-    } else {
-        // fallback
-        glBufferSubData(GL_ARRAY_BUFFER,0, vertSizeBytes, allVerts.data());
+    batchEbo->bind();
+    for (size_t ci =0; ci < chunkList.size(); ++ci) {
+        const auto& key = chunkList[ci].first;
+        Chunk* c = chunkList[ci].second;
+        const std::vector<char>& rv = c->getRawVertices();
+        const std::vector<unsigned int>& idx = c->getIndices();
+        if (rv.empty() || idx.empty()) continue;
+        auto it = slotMap.find(key);
+        if (it == slotMap.end()) continue; // should not happen
+        SlotInfo info = it->second;
+        // upload vertex block
+        if (info.vertSizeBytes >0) {
+            glBufferSubData(GL_ARRAY_BUFFER, (GLintptr)info.vertOffsetBytes, (GLsizeiptr)info.vertSizeBytes, rv.data());
+        }
+        // upload adjusted indices
+        if (info.idxSizeBytes >0) {
+            size_t idxCount = idx.size();
+            std::vector<unsigned int> adj; adj.reserve(idxCount);
+            for (size_t k =0; k < idxCount; ++k) adj.push_back(idx[k] + static_cast<unsigned int>(info.vertexBase));
+            glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, (GLintptr)info.idxOffsetBytes, (GLsizeiptr)info.idxSizeBytes, adj.data());
+        }
     }
 
-    batchEbo->bind();
-    GLsizeiptr idxSizeBytes = static_cast<GLsizeiptr>(allIndices.size() * sizeof(unsigned int));
-    if (batchIndexCapacity * sizeof(unsigned int) < idxSizeBytes) {
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, idxSizeBytes, nullptr, GL_DYNAMIC_DRAW);
-        batchIndexCapacity = allIndices.size();
-    }
-    void* idst = glMapBufferRange(GL_ELEMENT_ARRAY_BUFFER,0, idxSizeBytes, GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_RANGE_BIT | GL_MAP_UNSYNCHRONIZED_BIT);
-    if (idst) {
-        memcpy(idst, allIndices.data(), idxSizeBytes);
-        glUnmapBuffer(GL_ELEMENT_ARRAY_BUFFER);
-    } else {
-        glBufferSubData(GL_ELEMENT_ARRAY_BUFFER,0, idxSizeBytes, allIndices.data());
-    }
+    // Link attributes once
+    batchVao->bind();
     batchVao->linkVBO(*batchVbo,0,3, GL_FLOAT,5 * sizeof(float), (void*)0);
     batchVao->linkVBO(*batchVbo,1,2, GL_FLOAT,5 * sizeof(float), (void*)(3 * sizeof(float)));
+    batchEbo->bind();
     batchVao->unbind();
 
-    // Draw
+    // Update batch index count and draw
+    batchIndexCount = totalIndexBytes / sizeof(unsigned int);
+
     shader.use();
     shader.setMat4("model", glm::mat4(1.0f));
     shader.setMat4("view", camera.GetViewMatrix());
     shader.setMat4("projection", camera.GetProjectionMatrix());
 
     batchVao->bind();
-    glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(allIndices.size()), GL_UNSIGNED_INT,0);
+    glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(batchIndexCount), GL_UNSIGNED_INT,0);
     batchVao->unbind();
+
+    batchDirty = false;
 }
