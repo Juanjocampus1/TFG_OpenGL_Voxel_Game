@@ -1,34 +1,142 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\deberes\\2\u00BA DE DAM\\TFG\\",
+  "WorkspaceRootPath": "E:\\deberes\\2_DE_DAM\\TFG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\Event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Game\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Game\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Game\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Game\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\World\\Chunk.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\World\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\World\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Timestep.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\Timestep.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\MouseCodes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\MouseCodes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\KeyCodes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Core\\KeyCodes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\shaders\\MineShader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:shaders\\MineShader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\ImGuiLayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\ImGuiLayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\ImGuiLayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\ImGuiLayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\VBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Header_files\\Blocks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Mesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\Texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\EBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\EBO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\EBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\Renderer\\EBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\World\\Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Blocks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\World\\Blocks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7AAC630-5D7E-47D1-94D7-EF6D958841F8}|opengl_principles.vcxproj|solutionrelative:src\\World\\Chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,8 +145,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 317,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,92 +154,420 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "block.cpp",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\block.cpp",
-              "RelativeDocumentMoniker": "src\\block.cpp",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\block.cpp",
-              "RelativeToolTip": "src\\block.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Chunk.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Chunk.cpp",
+              "RelativeDocumentMoniker": "src\\World\\Chunk.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Chunk.cpp",
+              "RelativeToolTip": "src\\World\\Chunk.cpp",
+              "ViewState": "AgIAAJIAAAAAAAAAAIA1wKgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-10T20:06:16.726Z"
+              "WhenOpened": "2025-10-27T17:29:44.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Block.h",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Block.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\Block.h",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Block.h",
-              "RelativeToolTip": "src\\Header_files\\Block.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 33,
+              "Title": "Chunk.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Chunk.h",
+              "RelativeDocumentMoniker": "src\\World\\Chunk.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Chunk.h",
+              "RelativeToolTip": "src\\World\\Chunk.h",
+              "ViewState": "AgIAABwAAAAAAAAAAEBRwB4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-10T20:06:12.62Z"
+              "WhenOpened": "2025-10-27T17:29:42.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Blocks.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Blocks.cpp",
+              "RelativeDocumentMoniker": "src\\World\\Blocks.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Blocks.cpp",
+              "RelativeToolTip": "src\\World\\Blocks.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T17:29:40.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Blocks.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Blocks.h",
+              "RelativeDocumentMoniker": "src\\World\\Blocks.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Blocks.h",
+              "RelativeToolTip": "src\\World\\Blocks.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T17:29:37.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Block.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Block.cpp",
+              "RelativeDocumentMoniker": "src\\World\\Block.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Block.cpp",
+              "RelativeToolTip": "src\\World\\Block.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T17:29:36.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Block.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Block.h",
+              "RelativeDocumentMoniker": "src\\World\\Block.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\World\\Block.h",
+              "RelativeToolTip": "src\\World\\Block.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T17:29:34.67Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Blocks.h",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Blocks.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\Blocks.h",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\Blocks.h",
-              "RelativeToolTip": "src\\Header_files\\Blocks.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-10T16:40:19.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Mesh.cpp",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Mesh.cpp",
-              "RelativeDocumentMoniker": "src\\Mesh.cpp",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Mesh.cpp",
-              "RelativeToolTip": "src\\Mesh.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBMAAAAOAAAAAAAAAA==",
+              "Title": "Cube.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Game\\Cube.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Cube.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Game\\Cube.cpp",
+              "RelativeToolTip": "src\\Game\\Cube.cpp",
+              "ViewState": "AgIAAEEAAAAAAAAAAIA1wAMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-09T19:20:12.694Z"
+              "WhenOpened": "2025-10-27T17:12:31.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "chunk.h",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\chunk.h",
-              "RelativeDocumentMoniker": "src\\Header_files\\chunk.h",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Header_files\\chunk.h",
-              "RelativeToolTip": "src\\Header_files\\chunk.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Cube.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Game\\Cube.h",
+              "RelativeDocumentMoniker": "src\\Game\\Cube.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Game\\Cube.h",
+              "RelativeToolTip": "src\\Game\\Cube.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-08T20:29:09.998Z"
+              "WhenOpened": "2025-10-27T17:12:19.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "chunk.cpp",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\chunk.cpp",
-              "RelativeDocumentMoniker": "src\\chunk.cpp",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\chunk.cpp",
-              "RelativeToolTip": "src\\chunk.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "MouseCodes.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\MouseCodes.h",
+              "RelativeDocumentMoniker": "src\\Core\\MouseCodes.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\MouseCodes.h",
+              "RelativeToolTip": "src\\Core\\MouseCodes.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:53:06.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "KeyCodes.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\KeyCodes.h",
+              "RelativeDocumentMoniker": "src\\Core\\KeyCodes.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\KeyCodes.h",
+              "RelativeToolTip": "src\\Core\\KeyCodes.h",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:52:55.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Timestep.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Timestep.h",
+              "RelativeDocumentMoniker": "src\\Core\\Timestep.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Timestep.h",
+              "RelativeToolTip": "src\\Core\\Timestep.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:52:46.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Camera.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Camera.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\Camera.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Camera.cpp",
+              "RelativeToolTip": "src\\Renderer\\Camera.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAlwC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-03T21:54:46.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T16:47:21.979Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Main.cpp",
-              "RelativeDocumentMoniker": "src\\Main.cpp",
-              "ToolTip": "E:\\deberes\\2\u00BA DE DAM\\TFG\\src\\Main.cpp",
-              "RelativeToolTip": "src\\Main.cpp",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF4AAAATAAAAAAAAAA==",
+              "Title": "Camera.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Camera.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\Camera.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Camera.h",
+              "RelativeToolTip": "src\\Renderer\\Camera.h",
+              "ViewState": "AgIAABMAAAAAAAAAAIA1wAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:47:15.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EBO.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\EBO.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\EBO.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\EBO.cpp",
+              "RelativeToolTip": "src\\Renderer\\EBO.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T17:36:45.043Z"
+              "WhenOpened": "2025-10-27T16:40:30.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EBO.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\EBO.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\EBO.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\EBO.h",
+              "RelativeToolTip": "src\\Renderer\\EBO.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:40:25.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Texture.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Texture.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\Texture.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Texture.cpp",
+              "RelativeToolTip": "src\\Renderer\\Texture.cpp",
+              "ViewState": "AgIAABMAAAAAAAAAAIA1wBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:39:57.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Texture.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Texture.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\Texture.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Texture.h",
+              "RelativeToolTip": "src\\Renderer\\Texture.h",
+              "ViewState": "AgIAABUAAAAAAAAAAEBRwBcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:39:51.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Renderer.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Renderer.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\Renderer.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Renderer.cpp",
+              "RelativeToolTip": "src\\Renderer\\Renderer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:35:54.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Renderer.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Renderer.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\Renderer.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Renderer.h",
+              "RelativeToolTip": "src\\Renderer\\Renderer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:35:43.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Window.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Window.cpp",
+              "RelativeDocumentMoniker": "src\\Core\\Window.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Window.cpp",
+              "RelativeToolTip": "src\\Core\\Window.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:35:29.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Window.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Window.h",
+              "RelativeDocumentMoniker": "src\\Core\\Window.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Window.h",
+              "RelativeToolTip": "src\\Core\\Window.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:35:18.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Event.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Event.h",
+              "RelativeDocumentMoniker": "src\\Core\\Event.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Event.h",
+              "RelativeToolTip": "src\\Core\\Event.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:35:08.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MineShader.glsl",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\shaders\\MineShader.glsl",
+              "RelativeDocumentMoniker": "shaders\\MineShader.glsl",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\shaders\\MineShader.glsl",
+              "RelativeToolTip": "shaders\\MineShader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-10-27T16:29:59.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ImGuiLayer.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\ImGuiLayer.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\ImGuiLayer.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\ImGuiLayer.cpp",
+              "RelativeToolTip": "src\\Renderer\\ImGuiLayer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:23:19.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ImGuiLayer.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\ImGuiLayer.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\ImGuiLayer.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\ImGuiLayer.h",
+              "RelativeToolTip": "src\\Renderer\\ImGuiLayer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:23:07.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "VAO.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VAO.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\VAO.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VAO.cpp",
+              "RelativeToolTip": "src\\Renderer\\VAO.cpp",
+              "ViewState": "AgIAABYAAAAAAAAAAABHwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:16:05.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "VAO.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VAO.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\VAO.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VAO.h",
+              "RelativeToolTip": "src\\Renderer\\VAO.h",
+              "ViewState": "AgIAABAAAAAAAAAAAABHwBEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:15:53.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "VBO.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VBO.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\VBO.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VBO.cpp",
+              "RelativeToolTip": "src\\Renderer\\VBO.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:15:39.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "VBO.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VBO.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\VBO.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\VBO.h",
+              "RelativeToolTip": "src\\Renderer\\VBO.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:15:35.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Shader.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\Shader.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Shader.cpp",
+              "RelativeToolTip": "src\\Renderer\\Shader.cpp",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAlwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:15:31.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Shader.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Shader.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\Shader.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Renderer\\Shader.h",
+              "RelativeToolTip": "src\\Renderer\\Shader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:15:24.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Application.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Application.cpp",
+              "RelativeDocumentMoniker": "src\\Core\\Application.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Application.cpp",
+              "RelativeToolTip": "src\\Core\\Application.cpp",
+              "ViewState": "AgIAAFgAAAAAAAAAAIA1wFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:15:19.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Application.h",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Application.h",
+              "RelativeDocumentMoniker": "src\\Core\\Application.h",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Core\\Application.h",
+              "RelativeToolTip": "src\\Core\\Application.h",
+              "ViewState": "AgIAABcAAAAAAAAAAIA1wBAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-27T16:15:13.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Main.cpp",
+              "RelativeDocumentMoniker": "src\\Main.cpp",
+              "ToolTip": "E:\\deberes\\2_DE_DAM\\TFG\\src\\Main.cpp",
+              "RelativeToolTip": "src\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-27T16:07:55.871Z"
             }
           ]
         }

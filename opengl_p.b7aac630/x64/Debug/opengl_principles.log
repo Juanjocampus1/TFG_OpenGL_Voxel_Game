@@ -1,10 +1,12 @@
-﻿  chunk.cpp
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(29,23): warning C4018: '<': no coinciden signed/unsigned
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(30,27): warning C4018: '<': no coinciden signed/unsigned
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(31,31): warning C4018: '<': no coinciden signed/unsigned
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(66,27): warning C4018: '>=': no coinciden signed/unsigned
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(98,27): warning C4018: '>=': no coinciden signed/unsigned
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(130,27): warning C4018: '>=': no coinciden signed/unsigned
-E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\src\chunk.cpp(148,32): warning C4267: '=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-  LINK : no se encontró E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\x64\Debug\opengl_principles.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
-  opengl_principles.vcxproj -> E:\deberes\1º de DAM\PROGRAMACION\C++\OPENGL\TFG\x64\Debug\opengl_principles.exe
+﻿  Application.cpp
+E:\deberes\2_DE_DAM\TFG\src\Core\Application.cpp(7,28): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+E:\deberes\2_DE_DAM\TFG\src\Core\Application.cpp(7,25): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+E:\deberes\2_DE_DAM\TFG\src\Core\Application.cpp(10,66): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+E:\deberes\2_DE_DAM\TFG\src\Core\Application.cpp(10,43): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  Cube.cpp
+  Main.cpp
+  Camera.cpp
+  Chunk.cpp
+E:\deberes\2_DE_DAM\TFG\src\World\Chunk.cpp(168,46): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
+  Generando código...
+  opengl_principles.vcxproj -> E:\deberes\2_DE_DAM\TFG\x64\Debug\opengl_principles.exe
