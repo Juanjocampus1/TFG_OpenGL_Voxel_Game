@@ -15,7 +15,7 @@
 #include "../Renderer/Renderer.h"
 #include "../Renderer/ImGuiLayer.h"
 #include "../Game/Cube.h"
-#include "../World/Chunk.h"
+#include "../World/Planet.h"
 #include "Window.h"
 #include "Timestep.h"
 
@@ -33,7 +33,8 @@ private:
     Shader* shader;
     Texture* texture;
     Camera* camera;
-    Chunk* chunk;
+    Planet* planet;
+    ImGuiLayer* imGuiLayer;
 
     double lastTime;
     int frameCount;

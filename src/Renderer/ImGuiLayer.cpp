@@ -26,10 +26,11 @@ void ImGuiLayer::end() {
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
 
-void ImGuiLayer::renderPanel(double fps, int frameCount) {
+void ImGuiLayer::renderPanel(double fps, int loaded, int unloaded) {
     ImGui::Begin("Debug Panel");
     ImGui::Text("FPS: %.1f", fps);
-    ImGui::Text("Frame Count: %d", frameCount);
+    ImGui::Text("Chunks Loaded: %d", loaded);
+    ImGui::Text("Chunks Unloaded: %d", unloaded);
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / fps, fps);
     ImGui::End();
 }

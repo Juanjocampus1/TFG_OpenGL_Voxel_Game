@@ -18,6 +18,7 @@ public:
     void ProcessKeyboard(KeyCode key, float dt);
     void ProcessMouseMovement(float xoffset, float yoffset);
     void SetSize(float w, float h) { width = w; height = h; }
+    glm::vec3 GetPosition() const { return position; }
 
 private:
     glm::vec3 position;

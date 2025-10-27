@@ -1,6 +1,6 @@
 #include "Application.h"
 
-Application::Application() : m_Window(nullptr), m_Renderer(nullptr), shader(nullptr), texture(nullptr), camera(nullptr), chunk(nullptr), lastTime(0.0), frameCount(0), fps(0.0), timestep(0.0f) {
+Application::Application() : m_Window(nullptr), m_Renderer(nullptr), shader(nullptr), texture(nullptr), camera(nullptr), planet(nullptr), lastTime(0.0), frameCount(0), fps(0.0), timestep(0.0f) {
     m_Window = new Window("Red Triangle", 800, 600);
     m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));
     m_Window->SetResizeCallback([this](int w, int h) {
@@ -8,11 +8,11 @@ Application::Application() : m_Window(nullptr), m_Renderer(nullptr), shader(null
     });
     initGLAD();
     camera = new Camera(m_Window->GetWidth(), m_Window->GetHeight());
-    // imGuiLayer = new ImGuiLayer(m_Window->GetNativeWindow());
+    imGuiLayer = new ImGuiLayer(m_Window->GetNativeWindow());
     m_Renderer = new Renderer();
     createShaders();
     createTexture();
-    chunk = new Chunk();
+    planet = new Planet(3); // Back to render distance 3 with optimizations
 }
 
 Application::~Application() {
@@ -73,6 +73,9 @@ void Application::initGLAD() {
         exit(-1);
     }
     glViewport(0, 0, m_Window->GetWidth(), m_Window->GetHeight());
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+    glCullFace(GL_BACK);
 }
 
 void Application::createShaders() {
@@ -95,13 +98,15 @@ void Application::render() {
     texture->texUnit(*shader, "tex0", 0);
     texture->bind();
 
-    chunk->draw(*shader, *camera);
+    planet->setCameraPos(camera->GetPosition());
+    planet->updateChunks();
+    planet->draw(*shader, *camera);
 
     texture->unbind();
 
-    // imGuiLayer->begin();
-    // imGuiLayer->renderPanel(fps, frameCount);
-    // imGuiLayer->end();
+    imGuiLayer->begin();
+    imGuiLayer->renderPanel(fps, planet->loaded, planet->unloaded);
+    imGuiLayer->end();
 
     m_Renderer->EndScene();
 }
@@ -110,7 +115,8 @@ void Application::cleanup() {
     if (texture) texture->deleteTex();
     delete shader;
     delete texture;
-    delete chunk;
+    delete planet;
+    delete imGuiLayer;
     delete m_Renderer;
     delete m_Window;
     delete camera;

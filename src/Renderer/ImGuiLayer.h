@@ -12,7 +12,7 @@ public:
     ~ImGuiLayer();
     void begin();
     void end();
-    void renderPanel(double fps, int frameCount);
+    void renderPanel(double fps, int loaded, int unloaded);
 };
 
 #endif

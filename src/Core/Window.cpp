@@ -20,6 +20,9 @@ Window::Window(const char* title, int width, int height) : width(width), height(
     }
 
     glfwMakeContextCurrent(window);
+    // Disable VSync
+    glfwSwapInterval(0);
+
     glfwSetWindowUserPointer(window, this);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetKeyCallback(window, key_callback);
