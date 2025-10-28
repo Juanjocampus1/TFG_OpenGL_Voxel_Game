@@ -27,7 +27,7 @@ glm::mat4 Camera::GetProjectionMatrix() const {
 }
 
 void Camera::ProcessKeyboard(KeyCode key, float dt) {
-    float velocity = movementSpeed * dt;
+    float velocity = movementSpeed * dt * 6.5f;
     if (key == KeyCode::W) position += front * velocity;
     if (key == KeyCode::S) position -= front * velocity;
     if (key == KeyCode::A) position -= right * velocity;
