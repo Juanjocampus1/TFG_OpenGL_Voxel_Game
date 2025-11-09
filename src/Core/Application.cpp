@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "Time.h"
 
 Application::Application()
     : m_Window(nullptr), m_Renderer(nullptr), shader(nullptr),
@@ -45,6 +46,9 @@ void Application::run() {
             frameCount = 0;
             fpsTimer = 0.0;
         }
+
+        // update global time
+        Time::Get().update(timestep);
 
         render();
         m_Window->Update();
@@ -100,6 +104,7 @@ void Application::initGLAD() {
 }
 
 void Application::createShaders() {
+    delete shader; // ensure cleanup
     shader = new Shader("shaders/MineShader.glsl");
 }
 
@@ -126,6 +131,13 @@ void Application::render() {
     // Update and draw planet
     planet->setCameraPos(camera->GetPosition());
     planet->updateChunks();
+
+    // Pass time and lighting uniforms to shader
+    shader->use();
+    shader->setFloat("timeOfDay", Time::Get().getTime());
+    shader->setFloat("ambientStrength", Time::Get().getAmbientStrength());
+    shader->setVec3("camPos", camera->GetPosition());
+
     planet->draw(*shader, *camera);
 
     texture->unbind();

@@ -87,8 +87,12 @@ void Planet::workerLoop() {
             if (chunks.find(key) == chunks.end()) {
                 chunks[key] = c;
                 c->meshDirty = true;
+                
+                // Set initial delay to spread mesh rebuilds over multiple frames
+                // Random delay 0-5 frames to prevent all chunks rebuilding at once
+                c->setDirtyDelay(rand() % 6);
 
-                // Mark neighbors as dirty
+                // Mark neighbors as dirty with delay
                 std::vector<std::tuple<int, int, int>> neighbors = {
                     {x + 1,y,z}, {x - 1,y,z}, {x,y + 1,z}, {x,y - 1,z}, {x,y,z + 1}, {x,y,z - 1}
                 };
@@ -96,6 +100,7 @@ void Planet::workerLoop() {
                     auto it = chunks.find(n);
                     if (it != chunks.end()) {
                         it->second->meshDirty = true;
+                        it->second->setDirtyDelay(2); // Small delay for neighbor updates
                     }
                 }
             }
@@ -111,7 +116,11 @@ void Planet::loadChunksAround() {
     int chunkY = static_cast<int>(std::floor(cameraPos.y / Chunk::SIZE));
     int chunkZ = static_cast<int>(std::floor(cameraPos.z / Chunk::SIZE));
 
-    std::vector<std::tuple<int, int, int>> toCreate;
+    struct ChunkDistance {
+        std::tuple<int, int, int> key;
+        float distance;
+    };
+    std::vector<ChunkDistance> toCreate;
     toCreate.reserve((renderDistance * 2 + 1) * (renderDistance * 2 + 1) * 6);
 
     {
@@ -122,7 +131,8 @@ void Planet::loadChunksAround() {
                 // Only load chunks within circular distance
                 float dx = (x - chunkX);
                 float dz = (z - chunkZ);
-                if (dx * dx + dz * dz > renderDistance * renderDistance) continue;
+                float dist2d = dx * dx + dz * dz;
+                if (dist2d > renderDistance * renderDistance) continue;
 
                 // Calculate height range for this column
                 float maxH = -1e9f;
@@ -153,16 +163,28 @@ void Planet::loadChunksAround() {
                 for (int y = minChunkY; y <= maxChunkY; ++y) {
                     auto key = std::make_tuple(x, y, z);
                     if (chunks.find(key) == chunks.end()) {
-                        toCreate.push_back(key);
+                        float dy = (y - chunkY);
+                        float dist = std::sqrt(dist2d + dy * dy);
+                        toCreate.push_back({key, dist});
                     }
                 }
             }
         }
     }
 
-    // Launch generation tasks (throttled)
-    const unsigned maxTasks = std::max(2u, std::thread::hardware_concurrency());
-    for (auto& key : toCreate) {
+    // Sort by distance - load closest chunks first
+    std::sort(toCreate.begin(), toCreate.end(), 
+        [](const ChunkDistance& a, const ChunkDistance& b) {
+            return a.distance < b.distance;
+        });
+
+    // Launch generation tasks (heavily throttled to prevent stutter)
+    const unsigned maxTasks = 1; // Only 1 chunk per frame max
+    unsigned tasksThisFrame = 0;
+    
+    for (auto& item : toCreate) {
+        if (tasksThisFrame >= maxTasks) break;
+        
         // Clean up finished tasks
         generationTasks.erase(
             std::remove_if(generationTasks.begin(), generationTasks.end(),
@@ -172,23 +194,17 @@ void Planet::loadChunksAround() {
             generationTasks.end()
         );
 
-        while (generationTasks.size() >= maxTasks) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(1));
-            generationTasks.erase(
-                std::remove_if(generationTasks.begin(), generationTasks.end(),
-                    [](std::future<void>& f) {
-                        return f.wait_for(std::chrono::milliseconds(0)) == std::future_status::ready;
-                    }),
-                generationTasks.end()
-            );
-        }
+        // Don't queue more if too many pending
+        const unsigned maxPendingTasks = 4;
+        if (generationTasks.size() >= maxPendingTasks) break;
 
         int x, y, z;
-        std::tie(x, y, z) = key;
+        std::tie(x, y, z) = item.key;
         generationTasks.push_back(
             std::async(std::launch::async, &Planet::generateChunk, this, x, y, z)
         );
         loaded++;
+        tasksThisFrame++;
     }
 }
 
@@ -247,7 +263,7 @@ void Planet::draw(Shader& shader, Camera& camera) {
     std::lock_guard<std::mutex> lock(chunksMutex);
 
     // Rebuild meshes on main thread for dirty chunks
-    const int MAX_REBUILDS_PER_FRAME = 4; // Limit rebuilds per frame
+    const int MAX_REBUILDS_PER_FRAME = 2; // Reduced from 4 to spread load
     int rebuiltCount = 0;
 
     for (auto& pair : chunks) {
